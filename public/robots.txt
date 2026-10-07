@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://autopost.wwwang.tw/sitemap-index.xml

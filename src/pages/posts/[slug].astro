@@ -1,0 +1,24 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getPublished, fmtDate } from '../../lib/posts';
+import { catName } from '../../lib/config';
+export async function getStaticPaths() {
+  return (await getPublished()).map((post) => ({ params: { slug: post.data.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const d = post.data;
+const { Content } = await render(post);
+const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
+---
+<Base title={d.title} description={d.description} image={og.src}>
+<article>
+  <h1>{d.title}</h1>
+  <div class="meta">發布 {fmtDate(d.date)}{d.updated && `・更新 ${fmtDate(d.updated)}`}・
+    {d.categories.map((c) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
+  {d.sample && <p class="notice">這是一篇示範文章，用來測試版型。</p>}
+  <Image src={d.hero} alt={d.title} width={1200} loading="eager" />
+  <div class="content"><Content /></div>
+</article>
+</Base>

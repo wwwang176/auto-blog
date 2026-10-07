@@ -1,0 +1,11 @@
+---
+// base: 列表根路徑，例如 "/" 或 "/category/ai-tools/"
+const { current, last, base } = Astro.props;
+const href = (n: number) => (n === 1 ? base : `${base}page/${n}/`);
+---
+{last > 1 && <nav class="pager" aria-label="分頁">
+  {current > 1 && <a href={href(current - 1)}>上一頁</a>}
+  {Array.from({ length: last }, (_, i) => i + 1).map((n) =>
+    n === current ? <span class="cur">{n}</span> : <a href={href(n)}>{n}</a>)}
+  {current < last && <a href={href(current + 1)}>下一頁</a>}
+</nav>}

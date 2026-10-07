@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import { catName } from '../lib/config';
+import { postUrl, fmtDate } from '../lib/posts';
+const { post } = Astro.props;
+const d = post.data;
+---
+<div class="card">
+  <a href={postUrl(d.slug)}><Image src={d.hero} alt={d.title} width={600} /></a>
+  <div class="body">
+    <div class="meta">{fmtDate(d.date)}・{d.categories.map((c: string) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
+    <h2><a href={postUrl(d.slug)}>{d.title}</a></h2>
+    <p>{d.description}</p>
+  </div>
+</div>

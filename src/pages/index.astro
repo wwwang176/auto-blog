@@ -1,0 +1,8 @@
+---
+import List from '../components/List.astro';
+import { getPublished } from '../lib/posts';
+import { SITE } from '../lib/config';
+const all = await getPublished();
+const page = { data: all.slice(0, SITE.pageSize), currentPage: 1, lastPage: Math.max(1, Math.ceil(all.length / SITE.pageSize)) };
+---
+<List page={page} base="/" heading="最新文章" />

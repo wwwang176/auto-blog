@@ -1,0 +1,11 @@
+---
+import List from '../../components/List.astro';
+import { getPublished } from '../../lib/posts';
+import { SITE } from '../../lib/config';
+export async function getStaticPaths({ paginate }: any) {
+  // 第 1 頁由 index.astro 產生，這裡只產 /page/2/ 之後
+  return paginate(await getPublished(), { pageSize: SITE.pageSize }).filter((p: any) => p.props.page.currentPage > 1);
+}
+const { page } = Astro.props;
+---
+<List page={page} base="/" heading={`最新文章・第 ${page.currentPage} 頁`} title={`第 ${page.currentPage} 頁`} />

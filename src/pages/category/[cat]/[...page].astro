@@ -1,0 +1,17 @@
+---
+import List from '../../../components/List.astro';
+import { getPublished } from '../../../lib/posts';
+import { SITE, CATEGORIES } from '../../../lib/config';
+export async function getStaticPaths({ paginate }: any) {
+  const all = await getPublished();
+  return CATEGORIES.flatMap((c) => {
+    const items = all.filter((p) => p.data.categories.includes(c.slug));
+    return paginate(items, { pageSize: SITE.pageSize, params: { cat: c.slug }, props: { name: c.name } })
+      .map((r: any) => ({ ...r, params: { ...r.params, page: r.params.page ? `page/${r.params.page}` : undefined } }));
+  });
+}
+const { page, name } = Astro.props;
+const { cat } = Astro.params;
+const suffix = page.currentPage > 1 ? `・第 ${page.currentPage} 頁` : '';
+---
+<List page={page} base={`/category/${cat}/`} heading={name + suffix} title={name + suffix} />
