@@ -3,7 +3,7 @@ title: "OpenAI 舊模型 10/23 停用：GPT-4、o1、o3-mini 等 17 項 API 退�
 date: 2026-10-07T20:00:00+08:00
 slug: openai-model-shutdown-2026-10-23
 categories: [new-models, industry]
-hero: ./hero.jpg
+hero: ./hero.webp
 description: "OpenAI 將在 2026 年 10 月 23 日停用 GPT-4、GPT-4 Turbo、GPT-3.5 Turbo、o1、o3-mini 等 17 項舊模型與微調模型的 API。本文整理完整停用清單、官方替代模型、誰會受影響，以及開發者和一般使用者該怎麼因應。"
 ---
 
