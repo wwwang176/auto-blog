@@ -10,15 +10,28 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const d = post.data;
 const { Content } = await render(post);
+const top = d.banner ?? d.hero;
+const credit = d.banner ? d.bannerCredit : d.heroCredit;
+const creditUrl = d.banner ? d.bannerCreditUrl : d.heroCreditUrl;
 const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
 ---
 <Base title={d.title} description={d.description} image={og.src}>
+<figure class={d.banner ? 'top banner' : 'top'}>
+  <Image src={top} alt={d.title} width={d.banner ? 1920 : 1200} widths={d.banner ? [640, 1280, 1920] : [600, 1200]} sizes={d.banner ? '(max-width: 1100px) 100vw, 1100px' : '(max-width: 720px) 100vw, 720px'} loading="eager" />
+  {credit && <figcaption>圖片來源：{creditUrl ? <a href={creditUrl} target="_blank" rel="noopener">{credit}</a> : credit}</figcaption>}
+</figure>
 <article>
   <h1>{d.title}</h1>
   <div class="meta">發布 {fmtDate(d.date)}{d.updated && `・更新 ${fmtDate(d.updated)}`}・
     {d.categories.map((c) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
   {d.sample && <p class="notice">這是一篇示範文章，用來測試版型。</p>}
-  <Image src={d.hero} alt={d.title} width={1200} loading="eager" />
   <div class="content"><Content /></div>
 </article>
 </Base>
+<style>
+.top{max-width:720px;margin:0 auto 1rem}
+.top.banner{max-width:1100px}
+.top img{width:100%;height:auto;display:block;border-radius:10px}
+.top.banner img{aspect-ratio:3/1;object-fit:cover}
+.top figcaption{color:var(--muted);font-size:.8rem;margin-top:.3rem;text-align:right}
+</style>

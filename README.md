@@ -9,7 +9,8 @@
 ```
 src/content/posts/<slug>/
 ├── index.md   ← 文章內容
-└── hero.jpg   ← 首圖，1200×630（jpg/png/webp 皆可）
+├── hero.jpg   ← 封面圖（必填），1200×630，用在列表卡片和社群分享（og:image）
+└── banner.jpg ← 橫幅圖（選填），1920×640，放在文章頁最上方
 ```
 
 `index.md` 開頭的 frontmatter：
@@ -22,6 +23,11 @@ updated: 2026-10-10T12:00:00+08:00 # 選填：更新舊文時才填
 slug: openai-new-model            # 小寫英數與連字號，須與資料夾同名
 categories: [new-models, ai-tools] # 至少一個，見下表
 hero: ./hero.jpg
+heroCredit: "圖片作者或來源名稱"       # 選填
+heroCreditUrl: "https://..."          # 選填，填了會變成連結
+banner: ./banner.jpg                  # 選填
+bannerCredit: "橫幅圖來源"            # 選填
+bannerCreditUrl: "https://..."        # 選填
 description: "一到兩句摘要，會用在列表、搜尋結果與社群分享"
 ---
 ```
@@ -35,6 +41,14 @@ description: "一到兩句摘要，會用在列表、搜尋結果與社群分享
 | 入門教學 | `tutorials` |
 
 類別定義在 `src/lib/config.ts`，新增類別請找網站工程。
+
+### 圖片規則
+| 欄位 | 尺寸 | 用途 |
+|---|---|---|
+| `hero`（必填） | 1200×630 | 列表卡片、og:image；沒有 banner 時也會放在文章頁頂端 |
+| `banner`（選填） | 1920×640（3:1） | 文章頁頂端的寬版橫幅 |
+
+文章頁的頂端圖下方會顯示「圖片來源：…」。用了 banner 就顯示 `bannerCredit`，沒有 banner 就顯示 `heroCredit`。有填網址的話會變成連結，都沒填就不顯示。
 
 ### 排程發文
 `date` 晚於建置時間的文章不會出現在網站上。Actions 每天台北時間 09:00、12:00、15:00、19:00 自動重建，時間到了的文章就會上線。所以可以先合併、排好時間。
