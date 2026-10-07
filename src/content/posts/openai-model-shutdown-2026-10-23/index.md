@@ -5,6 +5,7 @@ updated: 2026-10-07T21:00:00+08:00
 slug: openai-model-shutdown-2026-10-23
 categories: [new-models, industry]
 hero: ./hero.webp
+banner: ./banner.webp
 description: "OpenAI 將於 2026 年 10 月 23 日停用 GPT-4、GPT-3.5 Turbo、o1、o3-mini 等 17 項舊模型 API。完整停用清單、官方替代模型，以及開發者與一般使用者該如何因應。"
 ---
 

@@ -4,6 +4,7 @@ date: 2026-10-07T20:40:00+08:00
 slug: mistral-large-4-preview
 categories: [new-models, open-source]
 hero: ./hero.webp
+banner: ./banner.webp
 description: "Mistral Large 4 公開預覽版登場：1 兆參數、能看圖的開放權重模型，官方預計 10 月底釋出權重。白話整理規格、官方測試成績與使用方式。"
 ---
 
