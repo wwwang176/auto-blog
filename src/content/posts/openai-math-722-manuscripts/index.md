@@ -40,3 +40,5 @@ OpenAI 說，這些成果來自內部評測：他們向模型丟了**約 4,000 �
 - [GitHub：openai/math](https://github.com/openai/math)
 - [OpenAI Developer Community：First look at mathematics manuscripts from an internal frontier model at OpenAI](https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886)
 - [Scientific American：OpenAI unleashes hundreds more math results upon a field already in shock](https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/)
+
+圖片來源：[OpenAI〈Sharing AI progress in mathematics〉](https://openai.com/index/sharing-ai-progress-in-mathematics/)
