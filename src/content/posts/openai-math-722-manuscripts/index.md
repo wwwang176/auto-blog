@@ -4,6 +4,8 @@ date: 2026-10-07T21:30:00+08:00
 slug: openai-math-722-manuscripts
 categories: [open-source, industry]
 hero: ./hero.webp
+heroCredit: "OpenAI〈Sharing AI progress in mathematics〉"
+heroCreditUrl: "https://openai.com/index/sharing-ai-progress-in-mathematics/"
 description: "OpenAI 在 GitHub 公開 openai/math，收錄內部未發布模型寫出的 722 份數學手稿與 Lean 證明。白話整理內容、驗證方式，以及一般人該怎麼看。"
 ---
 
@@ -41,4 +43,3 @@ OpenAI 說，這些成果來自內部評測：他們向模型丟了**約 4,000 �
 - [OpenAI Developer Community：First look at mathematics manuscripts from an internal frontier model at OpenAI](https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886)
 - [Scientific American：OpenAI unleashes hundreds more math results upon a field already in shock](https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/)
 
-圖片來源：[OpenAI〈Sharing AI progress in mathematics〉](https://openai.com/index/sharing-ai-progress-in-mathematics/)
