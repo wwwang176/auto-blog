@@ -4,6 +4,7 @@ date: 2026-10-07T22:45:00+08:00
 slug: openai-decisions-api-gpt-6-luna
 categories: [new-models, ai-tools]
 hero: ./hero.webp
+banner: ./banner.webp
 description: "OpenAI Decisions API 開放公開測試，由 GPT-6 Luna 驅動，比 Responses API 快約 10 倍，專做是非、選擇、評分三種判斷，每百萬輸入 token 0.10 美元。白話看懂用途與價格。"
 ---
 
