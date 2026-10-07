@@ -1,10 +1,11 @@
 ---
 title: "OpenAI 舊模型 10/23 停用：GPT-4、o1、o3-mini 等 17 項 API 退場，你會受影響嗎？"
 date: 2026-10-07T20:00:00+08:00
+updated: 2026-10-07T21:00:00+08:00
 slug: openai-model-shutdown-2026-10-23
 categories: [new-models, industry]
 hero: ./hero.webp
-description: "OpenAI 將在 2026 年 10 月 23 日停用 GPT-4、GPT-4 Turbo、GPT-3.5 Turbo、o1、o3-mini 等 17 項舊模型與微調模型的 API。本文整理完整停用清單、官方替代模型、誰會受影響，以及開發者和一般使用者該怎麼因應。"
+description: "OpenAI 將於 2026 年 10 月 23 日停用 GPT-4、GPT-3.5 Turbo、o1、o3-mini 等 17 項舊模型 API。完整停用清單、官方替代模型，以及開發者與一般使用者該如何因應。"
 ---
 
 OpenAI 在官方的[模型停用公告頁](https://developers.openai.com/api/docs/deprecations)列出：**2026 年 10 月 23 日**起，一批舊模型將無法再透過 API 使用。這份名單最早在 2026 年 4 月 22 日公布，距離停用只剩大約兩週。
@@ -36,7 +37,7 @@ OpenAI 在官方的[模型停用公告頁](https://developers.openai.com/api/doc
 
 ## 對一般 ChatGPT 使用者有什麼影響？
 
-這份公告針對的是 **API**（也就是開發者把 OpenAI 模型接進自己產品的管道）。官方公告頁沒有提到 ChatGPT App 本身的模型選單會怎麼變；ChatGPT 是否同步調整，**待查**。
+這份公告針對的是 **API**（也就是開發者把 OpenAI 模型接進自己產品的管道）。OpenAI 在 Help Center 的 [Model Release Notes（模型更新紀錄）](https://help.openai.com/en/articles/9624314)中，並沒有針對 10 月 23 日發布任何 ChatGPT 調整。事實上，ChatGPT 和 API 的模型退場是分開進行的：GPT-4o、GPT-4.1、o4-mini 等舊模型早在 2026 年 2 月 13 日就已從 ChatGPT 下架（[官方說明](https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models)），當時官方也註明這些模型「在 API 上仍可繼續使用」。所以這次 10/23 的停用，主要影響的是 API，直接使用 ChatGPT App 的人通常不會看到模型選單有變化。
 
 比較可能感受到影響的情況是：你用的**第三方 App、聊天機器人、外掛或自動化工具**，背後還在呼叫這些舊模型。如果開發者沒有及時更新，10/23 之後可能出現錯誤、功能失效，或是回答風格突然改變（因為換成新模型）。
 
@@ -56,11 +57,12 @@ OpenAI 在官方的[模型停用公告頁](https://developers.openai.com/api/doc
 
 ## 重點整理
 
-- **什麼時候**：2026 年 10 月 23 日（官方以美國日期標示，實際關閉時刻**待查**）。
+- **什麼時候**：2026 年 10 月 23 日（官方只公布日期，確切關閉時刻尚未公布，請以[官方停用公告頁](https://developers.openai.com/api/docs/deprecations)為準）。
 - **停什麼**：GPT-4、GPT-4 Turbo、GPT-3.5 Turbo、GPT-4.1 nano、早期 GPT-4o、o1、o1-pro、o3-mini、o4-mini、gpt-image-1，以及 5 種微調模型，共 17 項。
 - **影響誰**：主要是 API 開發者；一般人則可能透過第三方 App 間接受影響。
 
 ## 來源
 
 - OpenAI API 官方文件：[Deprecations](https://developers.openai.com/api/docs/deprecations)（「2026-04-22: Legacy GPT model snapshots」段落）
+- OpenAI Help Center：[Model Release Notes](https://help.openai.com/en/articles/9624314)、[Retiring GPT-4o and other ChatGPT models](https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models)
 - OpenAI 開發者社群公告：[Deprecation notice: upcoming model shutdowns in 2026](https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553)
