@@ -1,6 +1,6 @@
 ---
 title: "Mistral Large 4 預覽版登場：1 兆參數、可看圖，權重月底開放下載"
-date: 2026-10-07T21:30:00+08:00
+date: 2026-10-07T20:40:00+08:00
 slug: mistral-large-4-preview
 categories: [new-models, open-source]
 hero: ./hero.jpg
