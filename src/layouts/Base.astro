@@ -33,10 +33,14 @@ const ga = import.meta.env.PUBLIC_GA_ID;
 <meta name="twitter:card" content="summary_large_image" />
 {ga && <link rel="preconnect" href="https://www.googletagmanager.com" />}
 {ga && <link rel="dns-prefetch" href="https://www.google-analytics.com" />}
-{/* GA 等頁面 load 完才插入 async script，不跟首屏內容搶頻寬和 CPU；事件先排進 dataLayer，不會漏掉 pageview */}
-{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);
-function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ga;document.head.appendChild(s)}
-if(document.readyState==='complete')loadGA();else addEventListener('load',loadGA,{once:true});</script>}
+{/* define:vars 會把 script 包成函式，所以 gtag 要明確掛在 window 上，其他程式（例如之後的事件追蹤）才能呼叫 */}
+{/* GA 等頁面 load 完、而且畫面已經第一次繪製（FCP）之後，再趁瀏覽器閒置時插入 async script（最晚 5 秒保底）。
+   原因：實測發現首次繪製有時晚於 load，gtag.js 若在繪製前執行會拖慢 LCP。事件先排進 dataLayer，不會漏掉 pageview。 */}
+{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',ga);
+var gaStarted=false;function loadGA(){if(gaStarted)return;gaStarted=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ga;document.head.appendChild(s)}
+function idleGA(){(window.requestIdleCallback||function(f){setTimeout(f,1)})(loadGA,{timeout:3000})}
+function afterPaint(){setTimeout(loadGA,5000);try{if(performance.getEntriesByName('first-contentful-paint').length)return idleGA();new PerformanceObserver(function(l,o){o.disconnect();idleGA()}).observe({type:'paint',buffered:true})}catch(e){idleGA()}}
+if(document.readyState==='complete')afterPaint();else addEventListener('load',afterPaint,{once:true});</script>}
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -54,7 +58,7 @@ header.site{border-bottom:1px solid var(--line);margin-bottom:1.5rem}
 header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;padding:.8rem 1rem}
 .brand{font-weight:700;font-size:1.25rem;color:var(--fg)}nav{display:flex;flex-wrap:nowrap;gap:1rem;font-size:.95rem;overflow-x:auto;white-space:nowrap;max-width:100%;scrollbar-width:none}
 /* 手機：分類選單單獨一行，可以橫向捲動；右側漸層淡出提示還有更多（mask 不影響版面，不會造成 CLS） */
-@media (max-width:700px){nav{flex-basis:100%;padding-right:2rem;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent)}}
+@media (max-width:700px){nav{flex-basis:100%;padding-right:2.5rem;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 2rem),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 2rem),transparent)}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
 .card{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:block}
