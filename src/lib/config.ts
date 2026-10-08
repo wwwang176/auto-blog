@@ -20,7 +20,7 @@ export const catName = (s: string) => CATEGORIES.find((c) => c.slug === s)?.name
 export const AUTHORS = [
   {
     id: 'xiaobian', name: '小編', slug: 'xiaobian',
-    bio: 'AI 新知站編輯部。每篇文章都以 AI 協作產出，並回到原始來源查證、附上引用；查不到的內容不發布。',
+    bio: 'AI 新知站編輯部。文章由 AI 協作產出，回到原始來源查證並附上引用；查不到的內容不發布。',
   },
 ] as const;
 export const AUTHOR_IDS = AUTHORS.map((a) => a.id) as [string, ...string[]];
