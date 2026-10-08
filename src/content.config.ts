@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { CATEGORY_SLUGS } from './lib/config';
+import { CATEGORY_SLUGS, AUTHOR_IDS, DEFAULT_AUTHOR } from './lib/config';
 const posts = defineCollection({
   loader: glob({ pattern: '*/index.md', base: './src/content/posts' }),
   schema: ({ image }) => z.object({
@@ -16,6 +16,7 @@ const posts = defineCollection({
     bannerCredit: z.string().optional(),
     bannerCreditUrl: z.string().url().regex(/^https?:\/\//, '必須是 http(s) 網址').optional(),
     description: z.string(),
+    author: z.enum(AUTHOR_IDS).default(DEFAULT_AUTHOR),
   }),
 });
 export const collections = { posts };

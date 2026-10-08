@@ -3,7 +3,7 @@ import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { getPublished, fmtDate } from '../../lib/posts';
-import { catName, SITE } from '../../lib/config';
+import { catName, SITE, getAuthor, authorUrl } from '../../lib/config';
 export async function getStaticPaths() {
   return (await getPublished()).map((post) => ({ params: { slug: post.data.slug }, props: { post } }));
 }
@@ -17,13 +17,15 @@ const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogAbs = new URL(og.src, Astro.site).href;
 const modified = d.updated ?? d.date;
+const author = getAuthor(d.author);
+const authorLd = { '@type': 'Organization', name: author.name, url: SITE.url + authorUrl(d.author) };
 const org = { '@type': 'Organization', name: SITE.title, url: SITE.url, logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.png`, width: 512, height: 512 } };
 const jsonLd = [
   {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
     headline: d.title, description: d.description, image: [ogAbs],
     datePublished: d.date.toISOString(), dateModified: modified.toISOString(),
-    author: org, publisher: org,
+    author: authorLd, publisher: org,
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
     inLanguage: SITE.lang,
   },
@@ -44,6 +46,7 @@ const jsonLd = [
 </figure>
 <article>
   <h1>{d.title}</h1>
+  <div class="byline">文／<a href={authorUrl(d.author)} rel="author">{author.name}</a></div>
   <div class="meta">發布 {fmtDate(d.date)}{d.updated && `・更新 ${fmtDate(d.updated)}`}・
     {d.categories.map((c) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
   <div class="content"><Content /></div>
@@ -54,5 +57,6 @@ const jsonLd = [
 .top.banner{max-width:1100px}
 .top img{width:100%;height:auto;display:block;border-radius:10px}
 .top.banner img{aspect-ratio:3/1;object-fit:cover}
+.byline{font-size:.95rem;margin:-.5rem 0 .2rem}
 .top figcaption{color:var(--muted);font-size:.8rem;margin-top:.3rem;text-align:right}
 </style>
