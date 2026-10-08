@@ -63,6 +63,10 @@ Decisions API 就是專門做這件事的。依 [OpenAI 官方文件](https://de
 
 Decisions API 把 AI 從「什麼都寫」變成「快速下判斷」：是不是、選哪個、幾分。對一般人來說，它是幕後工具，影響的會是各種 App 的反應速度與自動化程度。開發者可以先在 [OpenAI Playground](https://platform.openai.com/decisions) 試用。
 
+## 小編觀點
+
+Decisions API 是幕後工具，一般人不會直接用到，但可能讓很多 App 的分類和判斷更快、更便宜。小編看好它把問題拆成是非、選擇、評分三種固定格式：結果好處理，又附信心程度，方便開發者設定「信心不夠就交給真人」，比自由發揮更適合客服分流、內容審核。存疑的是，它還在公開測試，規則可能改變，而且只支援 GPT-6 Luna 一個模型；「快約 10 倍」也是官方自己的比較。值不值得試？有大量分類或審核需求的開發者，可先用自己的資料測準確度；一般讀者只要知道，未來客服變快，背後可能就是這類工具。對資料落地有要求的台灣企業，也要先確認區域處理是否合規。
+
 ## 參考來源
 
 - [OpenAI API 文件：Decisions](https://developers.openai.com/api/docs/guides/decisions)
@@ -71,7 +75,3 @@ Decisions API 把 AI 從「什麼都寫」變成「快速下判斷」：是不�
 - [OpenAI API 文件：Supported countries and territories](https://developers.openai.com/api/docs/supported-countries)
 - [Claude 開發文件：Pricing 價目表](https://platform.claude.com/docs/en/about-claude/pricing)
 - [臺灣銀行：2026/10/8 美元牌告匯率（上午即期賣出約 31.9）](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)
-
-## 小編觀點
-
-Decisions API 是幕後工具，一般人不會直接用到，但可能讓很多 App 的分類和判斷更快、更便宜。小編看好它把問題拆成是非、選擇、評分三種固定格式：結果好處理，又附信心程度，方便開發者設定「信心不夠就交給真人」，比自由發揮更適合客服分流、內容審核。存疑的是，它還在公開測試，規則可能改變，而且只支援 GPT-6 Luna 一個模型；「快約 10 倍」也是官方自己的比較。值不值得試？有大量分類或審核需求的開發者，可先用自己的資料測準確度；一般讀者只要知道，未來客服變快，背後可能就是這類工具。對資料落地有要求的台灣企業，也要先確認區域處理是否合規。

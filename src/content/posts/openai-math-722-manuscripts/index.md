@@ -42,6 +42,10 @@ OpenAI 說，這些成果來自內部評測：他們向模型丟了**約 4,000 �
 - **台灣能不能看**：可以。[openai/math](https://github.com/openai/math) 公開在 GitHub，任何人都能免費下載，採 Apache 2.0 授權。
 - **中文**：手稿和說明文件都是英文，官方沒有提供中文版；內容是研究等級的數學論文，一般讀者直接讀會很吃力，可以先從公開庫建議的總覽 PDF 看起。
 
+## 小編觀點
+
+這批手稿對一般人沒有立即影響，但它是觀察 AI 能力的好指標：AI 開始處理沒有標準答案的研究問題，而且一部分結果能交給電腦逐行檢查。小編認為這次最值得肯定的是透明度，連撤回和修正都公開記錄；10 月 7 日的更新因為一個符號錯誤撤回 3 份手稿，正好說明沒有形式化證明的部分確實可能出錯。所以我們的立場是審慎樂觀：進展是真的，但「AI 已經能取代數學家」這類說法言之過早，真正的評價要等數學界花時間檢驗。另外，產出手稿的是還沒推出的內部模型，一般人目前用不到；每個結果平均耗用相當於 ChatGPT Pro 約 3 小時的思考算力，也代表這種能力短期內不會便宜。
+
 ## 來源
 
 - [OpenAI：Sharing AI progress in mathematics](https://openai.com/index/sharing-ai-progress-in-mathematics/)
@@ -49,7 +53,3 @@ OpenAI 說，這些成果來自內部評測：他們向模型丟了**約 4,000 �
 - [GitHub：openai/math 更新紀錄（history.md）](https://github.com/openai/math/blob/main/history.md)
 - [OpenAI Developer Community：First look at mathematics manuscripts from an internal frontier model at OpenAI](https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886)
 - [Scientific American：OpenAI unleashes hundreds more math results upon a field already in shock](https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/)
-
-## 小編觀點
-
-這批手稿對一般人沒有立即影響，但它是觀察 AI 能力的好指標：AI 開始處理沒有標準答案的研究問題，而且一部分結果能交給電腦逐行檢查。小編認為這次最值得肯定的是透明度，連撤回和修正都公開記錄；10 月 7 日的更新因為一個符號錯誤撤回 3 份手稿，正好說明沒有形式化證明的部分確實可能出錯。所以我們的立場是審慎樂觀：進展是真的，但「AI 已經能取代數學家」這類說法言之過早，真正的評價要等數學界花時間檢驗。另外，產出手稿的是還沒推出的內部模型，一般人目前用不到；每個結果平均耗用相當於 ChatGPT Pro 約 3 小時的思考算力，也代表這種能力短期內不會便宜。

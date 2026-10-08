@@ -69,6 +69,10 @@ GPT-6 Luna 這個名字你可能有印象：OpenAI 開發者工具 Decisions API
 
 GPT-6 讓 ChatGPT 的回答可以附上圖表、按鈕和小工具。付費方案 10 月 7 日起、免費和 Go 方案 10 月 8 日起（美國時間）分批開放；不想要新版面，可以在網頁版設定把「Layout and visuals」關掉。
 
+## 小編觀點
+
+這次最大的意義是免費版也能用 GPT-6 Luna，不必付費就能體驗新模型和互動版面。小編認為 Intelligent UI 對「比較、規劃、試算」這類問題是實質進步，表格和小工具比大段文字好讀。不過官方也承認，模型的版面設計判斷還有改進空間，而且版面變豐富不代表答案更正確，重要數字仍要核對來源。值不值得試？免費版直接試就好，不必為此升級；Plus 用戶則多了 Sol 可用。跟 Google Gemini 相比，兩家在台灣的月費區間接近，選擇時更該看自己習慣的生態系。存疑的是，關掉 Layout and visuals 後仍可能出現視覺元素，偏好純文字的人選擇有限。
+
 ## 資料來源
 
 - OpenAI 官方公告：[GPT-6 and Intelligent UI for everyone](https://openai.com/index/gpt-6-for-everyone/)（2026-10-07，美國時間）
@@ -80,7 +84,3 @@ GPT-6 讓 ChatGPT 的回答可以附上圖表、按鈕和小工具。付費方�
 - OpenAI 說明中心：[Multi-currency billing](https://help.openai.com/en/articles/10421635-multi-currency-billing)
 - [App Store 台灣區：ChatGPT](https://apps.apple.com/tw/app/chatgpt/id6448311069)（訂閱價格，2026/10/8 查詢）
 - [App Store 台灣區：Google Gemini](https://apps.apple.com/tw/app/google-gemini/id6477489729)（訂閱價格，2026/10/8 查詢）
-
-## 小編觀點
-
-這次最大的意義是免費版也能用 GPT-6 Luna，不必付費就能體驗新模型和互動版面。小編認為 Intelligent UI 對「比較、規劃、試算」這類問題是實質進步，表格和小工具比大段文字好讀。不過官方也承認，模型的版面設計判斷還有改進空間，而且版面變豐富不代表答案更正確，重要數字仍要核對來源。值不值得試？免費版直接試就好，不必為此升級；Plus 用戶則多了 Sol 可用。跟 Google Gemini 相比，兩家在台灣的月費區間接近，選擇時更該看自己習慣的生態系。存疑的是，關掉 Layout and visuals 後仍可能出現視覺元素，偏好純文字的人選擇有限。

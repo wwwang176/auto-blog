@@ -9,7 +9,7 @@ banner: ./banner.webp
 description: "ChatGPT 青少年版實測：Common Sense Media 用 4,000 多個提示測試，認為家長通知、危機轉介等保護不夠可靠，評為「不可接受的風險」；OpenAI 則質疑測試方法。白話整理雙方說法。"
 ---
 
-> 本文提到自殺、自傷等議題。如果你現在感到很難受，或擔心身邊的人，請直接撥打 **1925 安心專線（24 小時、免付費）**；有立即危險請撥 **110** 或 **119**。文末整理了更多求助管道。
+> 本文提到自殺、自傷等議題。如果你現在感到很難受，或擔心身邊的人，請直接撥打 **1925 安心專線（24 小時、免付費）**；有立即危險請撥 **110** 或 **119**。文章後段整理了更多求助管道。
 
 美國兒少媒體評鑑團體 **Common Sense Media** 在美國時間 **2026 年 10 月 7 日**[發布報告](https://www.commonsensemedia.org/press-releases/chatgpt-for-teens-poses-unacceptable-risk-to-kids-common-sense-media-finds)，把 OpenAI 8 月推出的「**ChatGPT 青少年版**」（ChatGPT for Teens）評為「**不可接受的風險**」（Unacceptable Risk），並呼籲 OpenAI 在改善之前，先把 ChatGPT 限制為 18 歲以上使用。
 
@@ -89,6 +89,10 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 
 衛生福利部也整理了[全國諮詢及救援服務專線](https://dep.mohw.gov.tw/Domhaoh/cp-327-8715-107.html)清單。
 
+## 小編觀點
+
+報告和 OpenAI 的回應各有依據，爭點在測試時機與通知機制，外界難以自行驗證。小編的立場是：在雙方說法釐清之前，家長不宜把青少年版或家長通知當成安全保障。OpenAI 說明中心也寫明，安全通知不是即時監控，不能取代專業照護。值得肯定的是，OpenAI 已把青少年保護做成預設設定，報告也承認部分回應有進步；最需要改善的，是危機情境中提供求助資源的比例下降。對台灣家庭來說，這次測試在美國進行，結果未必反映中文情境，但「多陪伴、多對話，不只靠設定」的原則同樣適用。如果你或身邊的人正感到困擾，請聯絡上方的求助專線。
+
 ## 參考來源
 
 - [Common Sense Media 新聞稿：ChatGPT for Teens Poses Unacceptable Risk to Kids](https://www.commonsensemedia.org/press-releases/chatgpt-for-teens-poses-unacceptable-risk-to-kids-common-sense-media-finds)
@@ -102,7 +106,3 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 - [OpenAI：Terms of Use](https://openai.com/policies/row-terms-of-use/)
 - [The Verge：ChatGPT for Teens is an 'unacceptable risk,' says Common Sense Media](https://www.theverge.com/ai-artificial-intelligence/1006355/openai-chatgpt-for-teens-common-sense-media)
 - [USA TODAY：A teen account shared suicidal thoughts with ChatGPT. New protections failed](https://www.usatoday.com/story/life/health-wellness/2026/10/07/chatgpt-teen-account-safety-features-testing/92133273007/)
-
-## 小編觀點
-
-報告和 OpenAI 的回應各有依據，爭點在測試時機與通知機制，外界難以自行驗證。小編的立場是：在雙方說法釐清之前，家長不宜把青少年版或家長通知當成安全保障。OpenAI 說明中心也寫明，安全通知不是即時監控，不能取代專業照護。值得肯定的是，OpenAI 已把青少年保護做成預設設定，報告也承認部分回應有進步；最需要改善的，是危機情境中提供求助資源的比例下降。對台灣家庭來說，這次測試在美國進行，結果未必反映中文情境，但「多陪伴、多對話，不只靠設定」的原則同樣適用。如果你或身邊的人正感到困擾，請聯絡上方的求助專線。
