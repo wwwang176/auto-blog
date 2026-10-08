@@ -1,11 +1,12 @@
 ---
-title: "OpenAI Decisions API 公開測試：GPT-6 Luna 快 10 倍做是非、選擇、評分"
+title: "OpenAI Decisions API 公測：GPT-6 Luna 快約 10 倍做判斷"
 date: 2026-10-07T22:45:00+08:00
+updated: 2026-10-08T09:53:00+08:00
 slug: openai-decisions-api-gpt-6-luna
 categories: [new-models, ai-tools]
 hero: ./hero.webp
 banner: ./banner.webp
-description: "OpenAI Decisions API 開放公開測試，由 GPT-6 Luna 驅動，比 Responses API 快約 10 倍，專做是非、選擇、評分三種判斷，每百萬輸入 token 0.10 美元。白話看懂用途與價格。"
+description: "OpenAI Decisions API 開放公開測試，由 GPT-6 Luna 驅動，比 Responses API 快約 10 倍，專做是非、選擇、評分，每百萬輸入 token 0.10 美元。"
 ---
 
 OpenAI 在美國時間 **2026 年 10 月 6 日**於[官方開發者論壇](https://community.openai.com/t/decisions-api-is-now-available-in-public-beta/1403877)宣布，**Decisions API** 開放所有開發者以公開測試版（public beta）使用。它不是給一般人聊天用的新 App，而是一個讓其他 App「快速做判斷」的工具，背後使用的模型是 **GPT-6 Luna**。
