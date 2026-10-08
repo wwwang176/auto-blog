@@ -29,7 +29,7 @@ const ga = import.meta.env.PUBLIC_GA_ID;
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-{jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
+{jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
 <meta name="twitter:card" content="summary_large_image" />
 {ga && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>}
 {ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);</script>}
