@@ -15,3 +15,15 @@ export const CATEGORIES = [
 ] as const;
 export const CATEGORY_SLUGS = CATEGORIES.map((c) => c.slug) as [string, ...string[]];
 export const catName = (s: string) => CATEGORIES.find((c) => c.slug === s)?.name ?? s;
+
+// 作者（frontmatter 的 author 填 id；沒填就是 DEFAULT_AUTHOR；填了不在清單裡的 id 會建置失敗）
+export const AUTHORS = [
+  {
+    id: 'xiaobian', name: '小編', slug: 'xiaobian',
+    bio: 'AI 新知站編輯部。文章由 AI 協作產出，回到原始來源查證並附上引用；查不到的內容不發布。',
+  },
+] as const;
+export const AUTHOR_IDS = AUTHORS.map((a) => a.id) as [string, ...string[]];
+export const DEFAULT_AUTHOR = 'xiaobian';
+export const getAuthor = (id: string) => AUTHORS.find((a) => a.id === id)!;
+export const authorUrl = (id: string) => `/author/${getAuthor(id).slug}/`;

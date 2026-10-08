@@ -6,7 +6,7 @@ export async function GET() {
   const body = posts.map((p) => ({
     slug: p.data.slug, title: p.data.title,
     date: p.data.date.toISOString(), updated: p.data.updated?.toISOString() ?? null,
-    categories: p.data.categories, description: p.data.description,
+    categories: p.data.categories, author: p.data.author, description: p.data.description,
     url: SITE.url + postUrl(p.data.slug),
   }));
   return new Response(JSON.stringify({ generated: new Date().toISOString(), count: body.length, posts: body }, null, 2),
