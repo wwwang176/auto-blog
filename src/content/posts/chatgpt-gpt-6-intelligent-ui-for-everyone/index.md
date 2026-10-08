@@ -3,8 +3,8 @@ title: "GPT-6 開放所有 ChatGPT 用戶：回答會附圖表、按鈕和小工
 date: 2026-10-08T09:00:00+08:00
 slug: chatgpt-gpt-6-intelligent-ui-for-everyone
 categories: [new-models, ai-tools]
-hero: ./hero.jpg
-banner: ./banner.jpg
+hero: ./hero.webp
+banner: ./banner.webp
 description: "OpenAI 把 GPT-6 推到所有 ChatGPT 用戶，付費版用 GPT-6 Sol、免費和 Go 方案用 GPT-6 Luna。新的 Intelligent UI 讓回答直接出現圖表、表單和可點的按鈕。白話整理怎麼用、怎麼關、哪些 App 不支援。"
 ---
 
