@@ -3,7 +3,7 @@ import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { getPublished, fmtDate } from '../../lib/posts';
-import { catName } from '../../lib/config';
+import { catName, SITE } from '../../lib/config';
 export async function getStaticPaths() {
   return (await getPublished()).map((post) => ({ params: { slug: post.data.slug }, props: { post } }));
 }
@@ -14,8 +14,30 @@ const top = d.banner ?? d.hero;
 const credit = d.banner ? d.bannerCredit : d.heroCredit;
 const creditUrl = d.banner ? d.bannerCreditUrl : d.heroCreditUrl;
 const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogAbs = new URL(og.src, Astro.site).href;
+const modified = d.updated ?? d.date;
+const org = { '@type': 'Organization', name: SITE.title, url: SITE.url, logo: { '@type': 'ImageObject', url: `${SITE.url}/icon-512.png`, width: 512, height: 512 } };
+const jsonLd = [
+  {
+    '@context': 'https://schema.org', '@type': 'BlogPosting',
+    headline: d.title, description: d.description, image: [ogAbs],
+    datePublished: d.date.toISOString(), dateModified: modified.toISOString(),
+    author: org, publisher: org,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    inLanguage: SITE.lang,
+  },
+  {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '首頁', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: catName(d.categories[0]), item: `${SITE.url}/category/${d.categories[0]}/` },
+      { '@type': 'ListItem', position: 3, name: d.title, item: canonical },
+    ],
+  },
+];
 ---
-<Base title={d.title} description={d.description} image={og.src}>
+<Base title={d.title} description={d.description} image={og.src} ogType="article" published={d.date} modified={modified} jsonLd={jsonLd}>
 <figure class={d.banner ? 'top banner' : 'top'}>
   <Image src={top} alt={d.title} width={d.banner ? 1920 : 1200} widths={d.banner ? [640, 1280, 1920] : [600, 1200]} sizes={d.banner ? '(max-width: 1100px) 100vw, 1100px' : '(max-width: 720px) 100vw, 720px'} loading="eager" fetchpriority="high" />
   {credit && <figcaption>圖片來源：{creditUrl ? <a href={creditUrl} target="_blank" rel="noopener">{credit}</a> : credit}</figcaption>}
@@ -24,7 +46,6 @@ const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
   <h1>{d.title}</h1>
   <div class="meta">發布 {fmtDate(d.date)}{d.updated && `・更新 ${fmtDate(d.updated)}`}・
     {d.categories.map((c) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
-  {d.sample && <p class="notice">這是一篇示範文章，用來測試版型。</p>}
   <div class="content"><Content /></div>
 </article>
 </Base>

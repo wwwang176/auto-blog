@@ -2,11 +2,17 @@
 import Base from '../layouts/Base.astro';
 import PostCard from './PostCard.astro';
 import Pager from './Pager.astro';
-const { page, base, heading, title } = Astro.props;
+const { page, base, heading, title, noindex = false } = Astro.props;
 ---
-<Base title={title}>
+<Base title={title} noindex={noindex}>
   {heading && <h1>{heading}</h1>}
-  {page.data.length === 0 ? <p>目前還沒有文章。</p> :
+  {page.data.length === 0 ? <div class="empty">
+    <p>這個分類還沒有文章，我們正在準備中。</p>
+    <p><a href="/">← 先看看最新文章</a></p>
+  </div> :
   <div class="grid">{page.data.map((p: any, i: number) => <PostCard post={p} eager={i === 0} />)}</div>}
   <Pager current={page.currentPage} last={page.lastPage} base={base} />
 </Base>
+<style>
+.empty{text-align:center;padding:3rem 1rem;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+</style>
