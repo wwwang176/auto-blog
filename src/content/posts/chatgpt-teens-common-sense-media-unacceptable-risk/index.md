@@ -1,6 +1,7 @@
 ---
 title: "ChatGPT 青少年版實測：兒少團體評為「不可接受的風險」，OpenAI 質疑測試方法"
 date: 2026-10-08T15:00:00+08:00
+updated: 2026-10-08T15:39:00+08:00
 slug: chatgpt-teens-common-sense-media-unacceptable-risk
 categories: [industry]
 hero: ./hero.webp
@@ -68,9 +69,22 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 - **多聊聊，而不是只靠設定。** Common Sense Media 建議家人一起聊聊 ChatGPT 可能帶來的風險，例如它會裝得像朋友、讓人一直聊下去，或讓孩子跳過學習過程；功課也可以用不靠科技的方式陪伴完成。
 - **收到通知時先關心孩子。** OpenAI 說明中心建議，先確認孩子當下是否安全、不帶評判地傾聽，並協助孩子聯絡信任的人、專業人員或求助專線（台灣的管道整理在文末）。
 
+## 台灣家長看這裡
+
+- **台灣能不能用**：台灣在 ChatGPT 的[支援地區清單](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)內。OpenAI 的[青少年版公告](https://openai.com/index/chatgpt-for-teens/)沒有列出地區限制，但也沒有特別說明台灣的開放情況；[家長控制說明](https://help.openai.com/en/articles/12315553-parental-controls-in-chatgpt)提到，部分設定的預設值可能因地區而不同。
+- **年齡規定**：依 OpenAI [使用條款](https://openai.com/policies/row-terms-of-use/)，使用者至少要滿 13 歲（或所在國家規定的最低年齡）；未滿 18 歲，需要家長或法定監護人同意。
+- **中文介面**：ChatGPT 介面支援中文（[官方語言設定說明](https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt)）。
+- **測試結果能不能直接套用到台灣**：要保留。評鑑方說明測試只在美國進行，報告沒有提供中文對話的測試結果。
+
 ## 總結
 
 這次爭議的核心是：**AI 平台宣稱的青少年保護，實際上有多可靠？** Common Sense Media 認為家長通知、危機轉介和學習保護都還不夠穩定；OpenAI 則認為測試時機影響了結果，而 Common Sense Media 表示堅持原本的結論。
+
+## 小編觀點
+
+（以下是小編的看法，不是官方說法，也不是實際使用心得。）
+
+報告和 OpenAI 的回應各有依據，爭點在測試時機與通知機制，外界難以自行驗證。小編的立場是：在雙方說法釐清之前，家長不宜把青少年版或家長通知當成安全保障。OpenAI 說明中心也寫明，安全通知不是即時監控，不能取代專業照護或緊急服務，這點雙方有共識。值得肯定的是，OpenAI 已把青少年保護做成預設設定，報告也承認部分回應有進步；最需要優先改善的，是危機情境中提供求助資源的比例下降。對台灣家庭來說，這次測試在美國進行，結果未必反映中文情境，但「多陪伴、多對話，不只靠設定」的原則同樣適用。如果你或身邊的人正感到困擾，請聯絡下方求助專線。
 
 ## 需要幫忙時，可以找誰（台灣）
 
@@ -89,5 +103,8 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 - [OpenAI：Introducing ChatGPT for Teens](https://openai.com/index/chatgpt-for-teens/)
 - [OpenAI：Helping teens learn, plan, and shape the future of AI](https://openai.com/index/teens-learn-and-plan/)
 - [OpenAI 說明中心：Managing parental controls in ChatGPT](https://help.openai.com/en/articles/12315553-parental-controls-in-chatgpt)
+- [OpenAI 說明中心：ChatGPT Supported Countries](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)
+- [OpenAI 說明中心：How to change your language setting in ChatGPT](https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt)
+- [OpenAI：Terms of Use](https://openai.com/policies/row-terms-of-use/)
 - [The Verge：ChatGPT for Teens is an 'unacceptable risk,' says Common Sense Media](https://www.theverge.com/ai-artificial-intelligence/1006355/openai-chatgpt-for-teens-common-sense-media)
 - [USA TODAY：A teen account shared suicidal thoughts with ChatGPT. New protections failed](https://www.usatoday.com/story/life/health-wellness/2026/10/07/chatgpt-teen-account-safety-features-testing/92133273007/)

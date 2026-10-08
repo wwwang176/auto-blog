@@ -1,7 +1,7 @@
 ---
 title: "GPT-6 開放 ChatGPT 全用戶，免費版也能用：Intelligent UI 附圖表"
 date: 2026-10-08T09:00:00+08:00
-updated: 2026-10-08T09:53:00+08:00
+updated: 2026-10-08T15:39:00+08:00
 slug: chatgpt-gpt-6-intelligent-ui-for-everyone
 categories: [new-models, ai-tools]
 hero: ./hero.webp
@@ -58,9 +58,22 @@ GPT-6 Luna 這個名字你可能有印象：OpenAI 開發者工具 Decisions API
 - **手機 App**：請更新到最新版本。
 - **舊版的 macOS、Windows 桌面 App**：**不支援**這些新功能，官方建議改用網頁版 ChatGPT。
 
+## 台灣讀者看這裡
+
+- **台灣能不能用**：可以。台灣在 OpenAI 的 [ChatGPT 支援地區清單](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)內，官方公告寫的是在全球分批推出。
+- **中文介面**：ChatGPT 的[介面語言](https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt)支援中文，可以在「設定 → 一般 → 語言」切換，用中文提問也能正常回答。
+- **價格**：ChatGPT 網頁訂閱可以直接用新台幣付款（[官方多幣別計費說明](https://help.openai.com/en/articles/10421635-multi-currency-billing)列有 TWD）。依 [App Store 台灣區 ChatGPT 頁面](https://apps.apple.com/tw/app/chatgpt/id6448311069)列出的訂閱價格（2026/10/8 查詢），Go 每月 NT$270、Plus 每月 NT$690。免費版就拿得到 GPT-6 Luna，要用 GPT-6 Sol 才需要 Plus 以上。
+- **跟台灣常用工具比**：另一個常見選擇是 Google Gemini。[App Store 台灣區 Gemini 頁面](https://apps.apple.com/tw/app/google-gemini/id6477489729)列出 Google AI Plus 為 NT$165、Google AI Pro 為 NT$650（2026/10/8 查詢）。兩家方案內容不同，例如 Google 的方案含雲端空間，不能只比價格。
+
 ## 一句話總結
 
 GPT-6 讓 ChatGPT 的回答可以附上圖表、按鈕和小工具。付費方案 10 月 7 日起、免費和 Go 方案 10 月 8 日起（美國時間）分批開放；不想要新版面，可以在網頁版設定把「Layout and visuals」關掉。
+
+## 小編觀點
+
+（以下是小編的看法，不是官方說法，也不是實際使用心得。）
+
+這次最大的意義是免費版也能用 GPT-6 Luna，不必付費就能體驗新模型和互動版面。小編認為 Intelligent UI 對「比較、規劃、試算」這類問題是實質進步，表格和小工具比大段文字好讀。不過官方也承認，模型的版面設計判斷還有改進空間，而且版面變豐富不代表答案更正確，重要數字仍要核對來源。值不值得試？免費版直接試就好，不必為此升級；Plus 用戶則多了 Sol 可用。跟 Google Gemini 相比，兩家在台灣的月費區間接近，選擇時更該看自己習慣的生態系。存疑的是，關掉 Layout and visuals 後仍可能出現視覺元素，偏好純文字的人選擇有限。
 
 ## 資料來源
 
@@ -68,3 +81,8 @@ GPT-6 讓 ChatGPT 的回答可以附上圖表、按鈕和小工具。付費方�
 - OpenAI 說明中心：[ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 - OpenAI 說明中心：[GPT-6 and other models in ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt)
 - OpenAI 開發者論壇：[GPT-6 is now rolling out to all ChatGPT users](https://community.openai.com/t/gpt-6-is-now-rolling-out-to-all-chatgpt-users/1404163)
+- OpenAI 說明中心：[ChatGPT Supported Countries](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries)
+- OpenAI 說明中心：[How to change your language setting in ChatGPT](https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt)
+- OpenAI 說明中心：[Multi-currency billing](https://help.openai.com/en/articles/10421635-multi-currency-billing)
+- [App Store 台灣區：ChatGPT](https://apps.apple.com/tw/app/chatgpt/id6448311069)（訂閱價格，2026/10/8 查詢）
+- [App Store 台灣區：Google Gemini](https://apps.apple.com/tw/app/google-gemini/id6477489729)（訂閱價格，2026/10/8 查詢）
