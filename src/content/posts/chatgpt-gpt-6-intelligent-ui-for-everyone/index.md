@@ -1,14 +1,14 @@
 ---
-title: "GPT-6 開放所有 ChatGPT 用戶：回答會附圖表、按鈕和小工具，免費版也能用"
+title: "GPT-6 開放所有 ChatGPT 用戶，免費版也能用：Intelligent UI 讓回答附圖表、按鈕和小工具"
 date: 2026-10-08T09:00:00+08:00
 slug: chatgpt-gpt-6-intelligent-ui-for-everyone
 categories: [new-models, ai-tools]
 hero: ./hero.webp
 banner: ./banner.webp
-description: "OpenAI 把 GPT-6 推到所有 ChatGPT 用戶，付費版用 GPT-6 Sol、免費和 Go 方案用 GPT-6 Luna。新的 Intelligent UI 讓回答直接出現圖表、表單和可點的按鈕。白話整理怎麼用、怎麼關、哪些 App 不支援。"
+description: "GPT-6 開放給所有 ChatGPT 用戶：付費版用 GPT-6 Sol，免費和 Go 方案用 GPT-6 Luna。新的 Intelligent UI 讓回答直接附圖表、表單和按鈕。白話整理各方案差異、怎麼關、哪些 App 不支援。"
 ---
 
-OpenAI 在美國時間 **2026 年 10 月 7 日**發布[〈GPT-6 and Intelligent UI for everyone〉](https://openai.com/index/gpt-6-for-everyone/)，宣布把 GPT-6 推到所有 ChatGPT 用戶。付費方案當天開始，**免費（Free）和 Go 方案從美國時間 10 月 8 日起陸續開放**。這次最明顯的改變是 **Intelligent UI**：ChatGPT 的回答不再只有一大段文字，而是可能直接附上圖表、示意圖、表單和可以點的按鈕。
+OpenAI 在美國時間 **2026 年 10 月 7 日**發布[〈GPT-6 and Intelligent UI for everyone〉](https://openai.com/index/gpt-6-for-everyone/)，宣布把 GPT-6 推到所有 ChatGPT 用戶。付費方案當天開始在全球分批開放，**免費（Free）和 Go 方案從美國時間 10 月 8 日起陸續開放**。這次最明顯的改變是 **Intelligent UI**：ChatGPT 的回答不再只有一大段文字，而是可能直接附上圖表、示意圖、表單和可以點的按鈕。
 
 ## 我用的方案會拿到哪個 GPT-6？
 
@@ -25,7 +25,7 @@ OpenAI 在美國時間 **2026 年 10 月 7 日**發布[〈GPT-6 and Intelligent 
 
 另外，這次只更新 ChatGPT 的 **Chat（聊天）**。官方明講 Work 和 Codex 背後的模型**不變**。
 
-GPT-6 Luna 這個名字你可能有印象：它也是 OpenAI 開發者工具 Decisions API 使用的模型，可參考我們之前的[〈OpenAI Decisions API 公開測試〉](/posts/openai-decisions-api-gpt-6-luna/)。
+GPT-6 Luna 這個名字你可能有印象：OpenAI 開發者工具 Decisions API 用的也是叫 GPT-6 Luna 的模型，可參考我們之前的[〈OpenAI Decisions API 公開測試〉](/posts/openai-decisions-api-gpt-6-luna/)。
 
 ## Intelligent UI 是什麼？一般人怎麼用？
 
@@ -59,7 +59,7 @@ GPT-6 Luna 這個名字你可能有印象：它也是 OpenAI 開發者工具 Dec
 
 ## 一句話總結
 
-GPT-6 這次最大的變化不是「更會聊天」，而是**回答的長相變了**：從一整段文字，變成可以點、可以調、可以算的小介面。免費用戶也拿得到，想試的話，問一個需要比較、規劃或計算的問題最容易看出差別。
+GPT-6 讓 ChatGPT 的回答可以附上圖表、按鈕和小工具。付費方案 10 月 7 日起、免費和 Go 方案 10 月 8 日起（美國時間）分批開放；不想要新版面，可以在網頁版設定把「Layout and visuals」關掉。
 
 ## 資料來源
 
