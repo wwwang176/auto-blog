@@ -3,8 +3,8 @@ title: "Anthropic 推出 Claude Haiku 5.5：最快最便宜的小模型，平均
 date: 2026-10-08T12:00:00+08:00
 slug: claude-haiku-5-5
 categories: [new-models]
-hero: ./hero.jpg
-banner: ./banner.jpg
+hero: ./hero.webp
+banner: ./banner.webp
 description: "Anthropic 推出 Claude Haiku 5.5，主打快又便宜，平均執行成本比 Haiku 4.5 低約 75%，也是第一個可調「努力程度」的 Haiku。同時 Sonnet 5.5 快取讀取降價一半，Max 和 Team 訂閱戶每月送 API 額度。"
 ---
 
