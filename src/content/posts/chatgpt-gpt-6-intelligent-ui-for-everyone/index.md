@@ -1,12 +1,12 @@
 ---
-title: "GPT-6 開放全用戶，免費版也能用：Intelligent UI 回答附圖表"
+title: "GPT-6 開放 ChatGPT 全用戶，免費版也能用：Intelligent UI 附圖表"
 date: 2026-10-08T09:00:00+08:00
 updated: 2026-10-08T09:53:00+08:00
 slug: chatgpt-gpt-6-intelligent-ui-for-everyone
 categories: [new-models, ai-tools]
 hero: ./hero.webp
 banner: ./banner.webp
-description: "ChatGPT 全面換上 GPT-6：付費版用 Sol，免費與 Go 用 Luna，分批開放。Intelligent UI 讓回答附圖表與按鈕，教你怎麼關、哪些 App 不支援。"
+description: "GPT-6 開放所有 ChatGPT 用戶，分批推出：付費版用 Sol，免費與 Go 用 Luna。Intelligent UI 讓回答附圖表與按鈕，教你怎麼關、哪些 App 不支援。"
 ---
 
 OpenAI 在美國時間 **2026 年 10 月 7 日**發布[〈GPT-6 and Intelligent UI for everyone〉](https://openai.com/index/gpt-6-for-everyone/)，宣布把 GPT-6 推到所有 ChatGPT 用戶。付費方案當天開始在全球分批開放，**免費（Free）和 Go 方案從美國時間 10 月 8 日起陸續開放**。這次最明顯的改變是 **Intelligent UI**：ChatGPT 的回答不再只有一大段文字，而是可能直接附上圖表、示意圖、表單和可以點的按鈕。
