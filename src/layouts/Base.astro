@@ -19,8 +19,12 @@ const ga = import.meta.env.PUBLIC_GA_ID;
 <meta property="og:url" content={canonical} /><meta property="og:type" content="website" />
 {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
 <meta name="twitter:card" content="summary_large_image" />
-{ga && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>}
-{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);</script>}
+{ga && <link rel="preconnect" href="https://www.googletagmanager.com" />}
+{ga && <link rel="preconnect" href="https://www.google-analytics.com" />}
+{/* GA 等頁面 load 完才插入 async script，不跟首屏內容搶頻寬和 CPU；事件先排進 dataLayer，不會漏掉 pageview */}
+{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ga;document.head.appendChild(s)}
+if(document.readyState==='complete')loadGA();else addEventListener('load',loadGA,{once:true});</script>}
 </head>
 <body>
 <header class="site"><div class="wrap">

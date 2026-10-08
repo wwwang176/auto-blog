@@ -17,7 +17,7 @@ const og = await getImage({ src: d.hero, width: 1200, format: 'jpg' });
 ---
 <Base title={d.title} description={d.description} image={og.src}>
 <figure class={d.banner ? 'top banner' : 'top'}>
-  <Image src={top} alt={d.title} width={d.banner ? 1920 : 1200} widths={d.banner ? [640, 1280, 1920] : [600, 1200]} sizes={d.banner ? '(max-width: 1100px) 100vw, 1100px' : '(max-width: 720px) 100vw, 720px'} loading="eager" />
+  <Image src={top} alt={d.title} width={d.banner ? 1920 : 1200} widths={d.banner ? [640, 1280, 1920] : [600, 1200]} sizes={d.banner ? '(max-width: 1100px) 100vw, 1100px' : '(max-width: 720px) 100vw, 720px'} loading="eager" fetchpriority="high" />
   {credit && <figcaption>圖片來源：{creditUrl ? <a href={creditUrl} target="_blank" rel="noopener">{credit}</a> : credit}</figcaption>}
 </figure>
 <article>

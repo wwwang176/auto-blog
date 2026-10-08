@@ -7,6 +7,6 @@ const { page, base, heading, title } = Astro.props;
 <Base title={title}>
   {heading && <h1>{heading}</h1>}
   {page.data.length === 0 ? <p>目前還沒有文章。</p> :
-  <div class="grid">{page.data.map((p: any) => <PostCard post={p} />)}</div>}
+  <div class="grid">{page.data.map((p: any, i: number) => <PostCard post={p} eager={i === 0} />)}</div>}
   <Pager current={page.currentPage} last={page.lastPage} base={base} />
 </Base>
