@@ -46,7 +46,6 @@ const jsonLd = [
   <h1>{d.title}</h1>
   <div class="meta">發布 {fmtDate(d.date)}{d.updated && `・更新 ${fmtDate(d.updated)}`}・
     {d.categories.map((c) => <a class="tag" href={`/category/${c}/`}>{catName(c)}</a>)}</div>
-  {d.sample && <p class="notice">這是一篇示範文章，用來測試版型。</p>}
   <div class="content"><Content /></div>
 </article>
 </Base>
