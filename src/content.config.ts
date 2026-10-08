@@ -16,7 +16,6 @@ const posts = defineCollection({
     bannerCredit: z.string().optional(),
     bannerCreditUrl: z.string().url().regex(/^https?:\/\//, '必須是 http(s) 網址').optional(),
     description: z.string(),
-    sample: z.boolean().optional(),
   }),
 });
 export const collections = { posts };
