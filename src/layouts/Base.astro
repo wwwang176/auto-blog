@@ -31,8 +31,12 @@ const ga = import.meta.env.PUBLIC_GA_ID;
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 {jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
 <meta name="twitter:card" content="summary_large_image" />
-{ga && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>}
-{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);</script>}
+{ga && <link rel="preconnect" href="https://www.googletagmanager.com" />}
+{ga && <link rel="dns-prefetch" href="https://www.google-analytics.com" />}
+{/* GA 等頁面 load 完才插入 async script，不跟首屏內容搶頻寬和 CPU；事件先排進 dataLayer，不會漏掉 pageview */}
+{ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',ga);
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ga;document.head.appendChild(s)}
+if(document.readyState==='complete')loadGA();else addEventListener('load',loadGA,{once:true});</script>}
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -48,7 +52,9 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:0 1rem}
 header.site{border-bottom:1px solid var(--line);margin-bottom:1.5rem}
 header.site .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;padding:.8rem 1rem}
-.brand{font-weight:700;font-size:1.25rem;color:var(--fg)}nav{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.95rem}
+.brand{font-weight:700;font-size:1.25rem;color:var(--fg)}nav{display:flex;flex-wrap:nowrap;gap:1rem;font-size:.95rem;overflow-x:auto;white-space:nowrap;max-width:100%;scrollbar-width:none}
+/* 手機：分類選單單獨一行，可以橫向捲動；右側漸層淡出提示還有更多（mask 不影響版面，不會造成 CLS） */
+@media (max-width:700px){nav{flex-basis:100%;padding-right:2rem;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 2.5rem),transparent)}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
 .card{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:block}
