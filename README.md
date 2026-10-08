@@ -8,9 +8,9 @@
 
 ```
 src/content/posts/<slug>/
-├── index.md   ← 文章內容
-├── hero.jpg   ← 封面圖（必填），1200×630，用在列表卡片和社群分享（og:image）
-└── banner.jpg ← 橫幅圖（選填），1920×640，放在文章頁最上方
+├── index.md    ← 文章內容
+├── hero.webp   ← 封面圖（必填），1200×630，用在列表卡片和社群分享（og:image）
+└── banner.webp ← 橫幅圖（選填），1920×640，放在文章頁最上方；沒有就用 hero
 ```
 
 `index.md` 開頭的 frontmatter：
@@ -22,12 +22,12 @@ date: 2026-10-08T09:00:00+08:00   # 發布時間（台北時間，務必加 +08:
 updated: 2026-10-10T12:00:00+08:00 # 選填：更新舊文時才填
 slug: openai-new-model            # 小寫英數與連字號，須與資料夾同名
 categories: [new-models, ai-tools] # 至少一個，見下表
-hero: ./hero.jpg
-heroCredit: "圖片作者或來源名稱"       # 選填
-heroCreditUrl: "https://..."          # 選填，填了會變成連結
-banner: ./banner.jpg                  # 選填
+hero: ./hero.webp
+heroCredit: "OpenAI 官方新聞稿"        # 選填，用官方圖片時必填
+heroCreditUrl: "https://..."          # 選填，必須是 http(s) 網址，填了會變成連結
+banner: ./banner.webp                 # 選填
 bannerCredit: "橫幅圖來源"            # 選填
-bannerCreditUrl: "https://..."        # 選填
+bannerCreditUrl: "https://..."        # 選填，必須是 http(s) 網址
 description: "一到兩句摘要，會用在列表、搜尋結果與社群分享"
 ---
 ```
@@ -43,19 +43,40 @@ description: "一到兩句摘要，會用在列表、搜尋結果與社群分享
 類別定義在 `src/lib/config.ts`，新增類別請找網站工程。
 
 ### 圖片規則
+圖片一律用 `.webp`，和 `index.md` 放在同一個資料夾。
+
 | 欄位 | 尺寸 | 用途 |
 |---|---|---|
-| `hero`（必填） | 1200×630 | 列表卡片、og:image；沒有 banner 時也會放在文章頁頂端 |
-| `banner`（選填） | 1920×640（3:1） | 文章頁頂端的寬版橫幅 |
+| `hero`（必填）`./hero.webp` | 1200×630 | 封面圖：列表卡片和 og:image（社群分享）；沒有 banner 時也放在文章頁頂端 |
+| `banner`（選填）`./banner.webp` | 1920×640（3:1） | 文章頁頂端的寬版橫幅；沒填就用 hero |
 
-文章頁的頂端圖下方會顯示「圖片來源：…」。用了 banner 就顯示 `bannerCredit`，沒有 banner 就顯示 `heroCredit`。有填網址的話會變成連結，都沒填就不顯示。
+**圖片來源欄位**
+
+| 欄位 | 說明 |
+|---|---|
+| `heroCredit` / `heroCreditUrl` | hero 的來源名稱和網址 |
+| `bannerCredit` / `bannerCreditUrl` | banner 的來源名稱和網址 |
+
+- 什麼時候要填：用了官方新聞圖、產品截圖這類別人的圖片，一定要填來源名稱，最好也附上原始網址。來源寫在這些欄位就好，不要再寫在內文，否則頁面會出現兩次。
+- 什麼時候不用填：美術用 AI 生成的圖片不必填。
+- 網址必須是 `http://` 或 `https://` 開頭，不然建置會失敗。
+- 文章頁頂端圖片下方會顯示「圖片來源：…」。用了 banner 就顯示 `bannerCredit`，沒有就顯示 `heroCredit`。有網址會變成連結，沒填就不顯示。
+
+**圖片內容**
+- hero 可以放文字：繁體中文短標題或重點數字。文字不能有錯字、要和內文一致，縮成手機寬度也要看得清楚。
+- banner 不放任何文字。
+- AI 生成的圖片不放真實人物或品牌商標，場景不要和最近幾篇文章重複。
+- 官方圖片只能取自官方新聞室、官方公告頁或媒體資源包，照原樣使用：除了縮放或裁成規定尺寸，不加字、不改內容。官方圖本身帶的文字可以保留。一定要填 `heroCredit`／`heroCreditUrl`（banner 用 `bannerCredit`／`bannerCreditUrl`）。
 
 ### 排程發文
-`date` 晚於建置時間的文章不會出現在網站上。Actions 每天台北時間 09:00、12:00、15:00、19:00 自動重建，時間到了的文章就會上線。所以可以先合併、排好時間。
+`date` 晚於建置時間的文章不會出現在網站上，等到時間之後的下一次重建才會上線，所以可以先合併、排好時間。
+
+Actions 每天在台北時間 09、12、15、19 點的第 2、7、13 分自動重建，每個時段跑三次互為備援。文章大約會在排定時間後 15 分鐘內出現。GitHub 排程偶爾會延遲；急的話可以到 Actions 頁面手動執行「Deploy to GitHub Pages」（workflow_dispatch），或推一個新 commit 到 main。
 
 ### 規則
-- 引用一律附來源連結；不全文翻譯別人的文章；查不到的寫「待查」。
-- 首圖不放真實人物或品牌商標。
+- 引用一律附來源連結；不全文翻譯別人的文章。
+- 查不到來源的內容不要寫進文章；正式文章出現「待查」「待確認」「TBD」這類字眼不會合併。
+- 圖片規則見上方「圖片內容」。
 - 開 PR 後 Actions 會自動跑建置檢查，frontmatter 有錯會失敗。
 
 ## 自動產生的檔案
