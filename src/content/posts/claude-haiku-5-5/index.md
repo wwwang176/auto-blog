@@ -1,11 +1,11 @@
 ---
-title: "Anthropic 推出 Claude Haiku 5.5：最快最便宜的小模型，平均成本比 Haiku 4.5 低約 75%"
+title: "Claude Haiku 5.5 登場：Anthropic 最快最便宜的小模型，平均成本比 Haiku 4.5 低約 75%"
 date: 2026-10-08T12:00:00+08:00
 slug: claude-haiku-5-5
 categories: [new-models]
 hero: ./hero.webp
 banner: ./banner.webp
-description: "Anthropic 推出 Claude Haiku 5.5，主打快又便宜，平均執行成本比 Haiku 4.5 低約 75%，也是第一個可調「努力程度」的 Haiku。同時 Sonnet 5.5 快取讀取降價一半，Max 和 Team 訂閱戶每月送 API 額度。"
+description: "Claude Haiku 5.5 主打快又便宜，平均執行成本比 Haiku 4.5 低約 75%，也是第一個可調「努力程度」的 Haiku。同場加映：Sonnet 5.5 快取讀取降價一半，Max、Team 訂閱戶每月送 API 額度。"
 ---
 
 Anthropic 在美國時間 **2026 年 10 月 7 日**[發表了 Claude Haiku 5.5](https://www.anthropic.com/claude-haiku-5-5)。Haiku 是 Claude 家族裡最小、最快的一型，這次官方形容新版是「我們推出過最便宜、最快、也最有能力的小模型」。同一天，Anthropic 也把中型模型 Sonnet 5.5 的部分價格砍半，並宣布 Max 和 Team 訂閱戶每個月可以領 API 額度。
@@ -37,7 +37,7 @@ Claude 目前有大中小幾種模型：大的（Opus、Fable）最聰明但最�
 
 簡單說，短的請求單價只有 Haiku 4.5 的**十分之一**，長的請求是**一半**。官方說，舊版 Haiku 約有九成請求都在 10 萬 token 以內。
 
-那為什麼平均是「便宜約 75%」而不是 90%？官方註明，Haiku 5.5 換了新的斷字方式，[同樣的文字會被算成大約多 30% 的 token](https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5)，75% 這個數字已經把這點算進去了。
+那為什麼平均是「便宜約 75%」而不是 90%？官方註明，Haiku 5.5 換了新的斷字方式，[同樣的文字會被算成大約多 30% 的 token](https://platform.claude.com/docs/en/models/haiku-5-5/whats-new-haiku-5-5)，75% 這個數字已經把新斷字方式的影響算進去了。
 
 ## 第一個能調「努力程度」的 Haiku
 
@@ -54,7 +54,7 @@ Claude 目前有大中小幾種模型：大的（Opus、Fable）最聰明但最�
 
 ## 實力如何？
 
-依官方公布的測試成績，Haiku 5.5 比 Haiku 4.5 進步很多。例如在測試「AI 能不能自己操作電腦完成多步驟任務」的 OSWorld 2.1（離線子集）上，Haiku 5.5 拿到 **72.4%**，Haiku 4.5 只有 15.7%；中型的 Sonnet 5.5 是 83.9%。
+依官方公布的測試成績，Haiku 5.5 比 Haiku 4.5 進步很多。例如在測試「AI 能不能自己操作電腦完成多步驟任務」的 OSWorld 2.1（離線子集）上，Haiku 5.5 拿到 **72.4%**，Haiku 4.5 只有 15.7%；中型的 Sonnet 5.5 是 83.9%。官方表格也列了 OpenAI 的 GPT-6 Luna 對照，同一項測試是 48.9%（GPT-6 Luna 可參考我們之前的[〈OpenAI Decisions API 公開測試〉](/posts/openai-decisions-api-gpt-6-luna/)）。
 
 不過官方也說得很清楚：**複雜的寫程式任務，還是 Sonnet 5.5 和 Opus 5.5 比較適合**。Haiku 5.5 的強項是範圍明確、數量很多的工作，這些工作以前用 Claude 可能太貴，現在比較負擔得起。
 
@@ -64,7 +64,7 @@ Claude 目前有大中小幾種模型：大的（Opus、Fable）最聰明但最�
 
 「快取」是指把常用的固定內容（例如很長的說明文件）先存起來，之後重複使用時就不用每次都付全額。
 
-依[官方公告](https://www.anthropic.com/claude-haiku-5-5)，從 10 月 7 日起，**Sonnet 5.5 的快取讀取價格從每 100 萬 token 0.20 美元降到 0.10 美元**，砍了一半。因為 AI 代理（會自己連續做很多步驟的 AI）大量使用快取，官方估計 Sonnet 5.5 在多數這類工作上**整體約便宜 20%**。Sonnet 5.5 的一般輸入、輸出價格則維持每 100 萬 token 2 美元和 10 美元。
+依[官方公告](https://www.anthropic.com/claude-haiku-5-5)，從 10 月 7 日起，**Sonnet 5.5 的快取讀取價格從每 100 萬 token 0.20 美元降到 0.10 美元**，砍了一半。因為快取讀取占模型 token 用量的一大部分，官方估計 Sonnet 5.5 在多數 AI 代理（會自己連續做很多步驟的 AI）工作上**整體約便宜 20%**。Sonnet 5.5 的一般輸入、輸出價格則維持每 100 萬 token 2 美元和 10 美元。
 
 ## 同場加映 2：Max、Team 訂閱戶每月送 API 額度
 
@@ -87,13 +87,12 @@ Claude 目前有大中小幾種模型：大的（Opus、Fable）最聰明但最�
 ## 跟一般人有什麼關係？
 
 - **如果你是開發者或小團隊**：Haiku 5.5 讓「大量、簡單」的 AI 工作便宜很多，例如自動分類客服信、整理大量文件摘要。開發者可以用模型名稱 `claude-haiku-5-5` 開始使用，官方說它已在 Claude 平台以及 Amazon、Google Cloud、Microsoft 的雲端服務上架。
-- **如果你有訂 Max 或 Team**：記得到 claude.ai 的帳單設定看看能不能領每月 API 額度，用不完不會累積。
+- **如果你有訂 Max 或 Team**：每月 API 額度要在 claude.ai 的帳單設定連結 Console 組織才能領，用不完不會累積。
 - **如果你用 Claude Code**：官方 [Claude Code v2.1.293 版本更新紀錄](https://github.com/anthropics/claude-code/releases/tag/v2.1.293)寫明，Haiku 5.5 已成為 Anthropic API 上預設的 Haiku 模型。
-- **如果你只用 App 聊天**：這次公告的重點在 API 和開發平台，你的訂閱價格和用量上限沒有因此改變。
 
 ## 總結
 
-Haiku 5.5 的定位很清楚：不是最聰明的，但又快又便宜，適合大量的小工作。搭配 Sonnet 5.5 快取降價和訂閱戶的每月 API 額度，Anthropic 這次主打的是「讓更多人用得起」。不過要注意，新模型同樣的文字會算成更多 token，實際能省多少，還是要用自己的工作實測。
+Haiku 5.5 主打又快又便宜，適合範圍明確、數量很多的小工作；平均執行成本比 Haiku 4.5 低約 75%，這個數字已計入新斷字方式會多算 token 的影響。同一天，Sonnet 5.5 快取讀取降價一半，Max 和 Team 訂閱戶也會在這週陸續拿到每月 API 額度。
 
 ## 參考來源
 
