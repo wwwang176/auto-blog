@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT 青少年版實測：兒少團體評為「不可接受的風險」，OpenAI 質疑測試方法"
 date: 2026-10-08T15:00:00+08:00
-updated: 2026-10-08T15:39:00+08:00
+updated: 2026-10-08T15:46:00+08:00
 slug: chatgpt-teens-common-sense-media-unacceptable-risk
 categories: [industry]
 hero: ./hero.webp
@@ -80,12 +80,6 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 
 這次爭議的核心是：**AI 平台宣稱的青少年保護，實際上有多可靠？** Common Sense Media 認為家長通知、危機轉介和學習保護都還不夠穩定；OpenAI 則認為測試時機影響了結果，而 Common Sense Media 表示堅持原本的結論。
 
-## 小編觀點
-
-（以下是小編的看法，不是官方說法，也不是實際使用心得。）
-
-報告和 OpenAI 的回應各有依據，爭點在測試時機與通知機制，外界難以自行驗證。小編的立場是：在雙方說法釐清之前，家長不宜把青少年版或家長通知當成安全保障。OpenAI 說明中心也寫明，安全通知不是即時監控，不能取代專業照護或緊急服務，這點雙方有共識。值得肯定的是，OpenAI 已把青少年保護做成預設設定，報告也承認部分回應有進步；最需要優先改善的，是危機情境中提供求助資源的比例下降。對台灣家庭來說，這次測試在美國進行，結果未必反映中文情境，但「多陪伴、多對話，不只靠設定」的原則同樣適用。如果你或身邊的人正感到困擾，請聯絡下方求助專線。
-
 ## 需要幫忙時，可以找誰（台灣）
 
 - **衛生福利部 1925 安心專線**：撥打 **1925**，24 小時、全年無休、免付費心理諮詢。（[衛生福利部](https://www.mohw.gov.tw/cp-23-135-1.html)）
@@ -108,3 +102,9 @@ Common Sense Media 回應說，他們堅持自己的測試方法與結果：十�
 - [OpenAI：Terms of Use](https://openai.com/policies/row-terms-of-use/)
 - [The Verge：ChatGPT for Teens is an 'unacceptable risk,' says Common Sense Media](https://www.theverge.com/ai-artificial-intelligence/1006355/openai-chatgpt-for-teens-common-sense-media)
 - [USA TODAY：A teen account shared suicidal thoughts with ChatGPT. New protections failed](https://www.usatoday.com/story/life/health-wellness/2026/10/07/chatgpt-teen-account-safety-features-testing/92133273007/)
+
+## 小編觀點
+
+（以下是小編的看法，不是官方說法，也不是實際使用心得。）
+
+報告和 OpenAI 的回應各有依據，爭點在測試時機與通知機制，外界難以自行驗證。小編的立場是：在雙方說法釐清之前，家長不宜把青少年版或家長通知當成安全保障。OpenAI 說明中心也寫明，安全通知不是即時監控，不能取代專業照護。值得肯定的是，OpenAI 已把青少年保護做成預設設定，報告也承認部分回應有進步；最需要改善的，是危機情境中提供求助資源的比例下降。對台灣家庭來說，這次測試在美國進行，結果未必反映中文情境，但「多陪伴、多對話，不只靠設定」的原則同樣適用。如果你或身邊的人正感到困擾，請聯絡上方的求助專線。
