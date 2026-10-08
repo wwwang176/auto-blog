@@ -1,6 +1,7 @@
 ---
 title: "Claude Haiku 5.5 登場：Anthropic 最快最便宜的小模型，平均成本比 Haiku 4.5 低約 75%"
 date: 2026-10-08T12:00:00+08:00
+updated: 2026-10-08T15:46:00+08:00
 slug: claude-haiku-5-5
 categories: [new-models]
 hero: ./hero.webp
@@ -90,6 +91,16 @@ Claude 目前有大中小幾種模型：大的（Opus、Fable）最聰明但最�
 - **如果你有訂 Max 或 Team**：每月 API 額度要在 claude.ai 的帳單設定連結 Console 組織才能領，用不完不會累積。
 - **如果你用 Claude Code**：官方 [Claude Code v2.1.293 版本更新紀錄](https://github.com/anthropics/claude-code/releases/tag/v2.1.293)寫明，Haiku 5.5 已成為 Anthropic API 上預設的 Haiku 模型。
 
+## 台灣讀者看這裡
+
+價格換算依臺灣銀行 2026 年 10 月 8 日上午的美元即期賣出牌告，1 美元約 31.9 新台幣（[臺灣銀行當日牌告](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)），僅供概算，實際刷卡金額依發卡銀行匯率與手續費而定。
+
+- **台灣能不能用**：可以。台灣同時列在 Anthropic [支援地區清單](https://www.anthropic.com/supported-countries)的 API 與 Claude.ai 兩部分。
+- **中文介面**：用中文跟 Claude 對話一直都可以。介面語言方面，媒體 10 月初[報導](https://pcrookie.com/claude-desktop-traditional-chinese-interface-2026/)網頁版與桌面版已出現「中文（繁體）」選項，但 Anthropic 官方說明中心的[介面語言清單](https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language)目前還沒列出中文，正式上線消息官方尚未公布。
+- **API 價格換算**：Haiku 5.5 在 10 萬 token 以內，每 100 萬 token 輸入約 NT$3.2、輸出約 NT$16；超過 10 萬 token 時，輸入約 NT$16、輸出約 NT$80。對照 Haiku 4.5 輸入約 NT$32、輸出約 NT$160。
+- **訂閱價格**：[App Store 台灣區 Claude 頁面](https://apps.apple.com/tw/app/claude-by-anthropic/id6473753684)列出的 App 內購價格（2026/10/8 查詢）為 Pro 每月 NT$690、Max 5x 每月 NT$3,990、Max 20x 每月 NT$7,990。Max 5x 每月送的 100 美元 API 額度約 NT$3,190，Max 20x 的 200 美元約 NT$6,380。
+- **跟其他工具比**：同樣主打便宜的 OpenAI GPT-6 Luna，用在 Decisions API 時每 100 萬輸入 token 也是 0.10 美元（約 NT$3.2），但它只負責是非、選擇、評分這類判斷；Haiku 5.5 能寫出完整回答，兩者用途不同。
+
 ## 總結
 
 Haiku 5.5 主打又快又便宜，適合範圍明確、數量很多的小工作；平均執行成本比 Haiku 4.5 低約 75%，這個數字已計入新斷字方式會多算 token 的影響。同一天，Sonnet 5.5 快取讀取降價一半，Max 和 Team 訂閱戶也會在這週陸續拿到每月 API 額度。
@@ -103,3 +114,15 @@ Haiku 5.5 主打又快又便宜，適合範圍明確、數量很多的小工作�
 - [Claude 開發文件：Pricing 價目表](https://platform.claude.com/docs/en/about-claude/pricing)
 - [Claude 說明中心：Monthly API credits for Max and Team plans](https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans)
 - [GitHub：Claude Code v2.1.293 版本更新紀錄](https://github.com/anthropics/claude-code/releases/tag/v2.1.293)
+- [Anthropic：Supported countries and regions](https://www.anthropic.com/supported-countries)
+- [Claude 說明中心：How to use Claude in your preferred language](https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language)
+- [軟體玩家：Claude 終於有繁體中文介面了（2026/10）](https://pcrookie.com/claude-desktop-traditional-chinese-interface-2026/)
+- [App Store 台灣區：Claude by Anthropic](https://apps.apple.com/tw/app/claude-by-anthropic/id6473753684)（訂閱價格，2026/10/8 查詢）
+- [OpenAI API 文件：Decisions](https://developers.openai.com/api/docs/guides/decisions)
+- [臺灣銀行：2026/10/8 美元牌告匯率（上午即期賣出約 31.9）](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)
+
+## 小編觀點
+
+（以下是小編的看法，不是官方說法，也不是實際使用心得。）
+
+Haiku 5.5 對一般消費者的直接影響不大，真正受惠的是開發者和用 AI 處理大量重複工作的小團隊：分類客服信、整理摘要這類工作，成本有機會明顯下降。小編看好它的定位很清楚，就是把「便宜到可以大量用」做好；可調努力程度也讓同一個模型能在省錢和品質之間取捨。不過有兩點要保留：第一，「平均便宜約 75%」是官方用自己的工作量估算，新斷字方式會讓同樣的文字多算約 30% token，實際能省多少，最好拿自己的資料試算；第二，測試成績都是 Anthropic 自己公布的。值不值得試？在用 Haiku 4.5 的開發者很值得換來比較；只想聊天的一般人，不必為它付費。
