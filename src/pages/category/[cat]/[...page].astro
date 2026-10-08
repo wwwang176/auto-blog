@@ -14,4 +14,4 @@ const { page, name } = Astro.props;
 const { cat } = Astro.params;
 const suffix = page.currentPage > 1 ? `・第 ${page.currentPage} 頁` : '';
 ---
-<List page={page} base={`/category/${cat}/`} heading={name + suffix} title={name + suffix} />
+<List page={page} base={`/category/${cat}/`} heading={name + suffix} title={name + suffix} noindex={page.total === 0} />

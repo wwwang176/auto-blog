@@ -91,4 +91,3 @@ npm run build   # 建置到 dist/
 ```
 GA4：設定環境變數 `PUBLIC_GA_ID=G-XXXX`（在 GitHub repo 的 Settings → Variables → Actions 設定）。
 
-`src/content/posts/sample-welcome` 是示範文章，正式上線後可刪除。
