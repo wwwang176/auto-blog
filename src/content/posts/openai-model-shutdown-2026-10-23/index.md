@@ -68,15 +68,13 @@ OpenAI 在官方的[模型停用公告頁](https://developers.openai.com/api/doc
 - **停什麼**：GPT-4、GPT-4 Turbo、GPT-3.5 Turbo、GPT-4.1 nano、早期 GPT-4o、o1、o1-pro、o3-mini、o4-mini、gpt-image-1，以及 5 種微調模型，共 17 項。
 - **影響誰**：主要是 API 開發者；一般人則可能透過第三方 App 間接受影響。
 
+## 小編觀點
+
+這次停用對直接用 ChatGPT 的人幾乎沒影響，要動起來的是還在呼叫舊模型的開發者。小編認為，OpenAI 從 4 月公告到 10 月停用，給了約半年緩衝，時程算合理，而且每個舊模型都列了建議替代，遷移路徑清楚。但換模型從來不只是改一個名字：回答長度、格式和價格都可能改變，有些服務還依賴舊模型的固定行為，建議至少留一週實際比對，別拖到最後。更值得注意的是後續節奏：12 月 11 日還有一波 GPT-5 與 o3 快照停用，自助微調服務也在收緊，代表依賴特定模型版本的風險越來越高。一般讀者若在 10/23 前後遇到常用的 AI 小工具出錯，先看業者有沒有更新公告即可。
+
 ## 來源
 
 - OpenAI API 官方文件：[Deprecations](https://developers.openai.com/api/docs/deprecations)（「2026-04-22: Legacy GPT model snapshots」段落）
 - OpenAI Help Center：[Model Release Notes](https://help.openai.com/en/articles/9624314)、[Retiring GPT-4o and other ChatGPT models](https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models)
 - OpenAI 開發者社群公告：[Deprecation notice: upcoming model shutdowns in 2026](https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553)
 - OpenAI API 官方文件：[Supported countries and territories](https://developers.openai.com/api/docs/supported-countries)
-
-## 小編觀點
-
-（以下是小編的看法，不是官方說法，也不是實際使用心得。）
-
-這次停用對直接用 ChatGPT 的人幾乎沒影響，要動起來的是還在呼叫舊模型的開發者。小編認為，OpenAI 從 4 月公告到 10 月停用，給了約半年緩衝，時程算合理，而且每個舊模型都列了建議替代，遷移路徑清楚。但換模型從來不只是改一個名字：回答長度、格式和價格都可能改變，有些服務還依賴舊模型的固定行為，建議至少留一週實際比對，別拖到最後。更值得注意的是後續節奏：12 月 11 日還有一波 GPT-5 與 o3 快照停用，自助微調服務也在收緊，代表依賴特定模型版本的風險越來越高。一般讀者若在 10/23 前後遇到常用的 AI 小工具出錯，先看業者有沒有更新公告即可。
