@@ -38,7 +38,7 @@ description: "ICANN 新網域字尾申請 1615 件，.agent 有 13 件、.agi �
 
 （資料來源：[ICANN 2026 輪申請清單](https://newgtldprogram-aps.icann.org/applications)、[ICANN 爭奪字串清單 CSV](https://newgtldprogram.icann.org/en/application-rounds/round2/reveal-day-contention-sets.csv)）
 
-- **`.agent`（代理）**：AI 代理是今年最熱的話題之一，13 個申請者搶同一個字尾，是 AI 相關字尾裡最多的。除了 Google、Meta、OpenAI，還有多家專門經營網域的公司。
+- **`.agent`（代理）**：AI 代理是能替人自動辦事的 AI（例如本站介紹過的 [OpenAI Dots](/posts/openai-dots-agent-wired-hands-on/)），13 個申請者搶同一個字尾，是 AI 相關字尾裡最多的。除了 Google、Meta、OpenAI，還有多家專門經營網域的公司。
 - **`.agi`**：AGI 通常指「通用人工智慧」。OpenAI 和另外 6 個申請者都想要。
 - **各家申請總數**：OpenAI 一共申請 15 個字尾，包括 `.openai`、`.chatgpt`、`.gpt`、`.codex`；Meta（Meta Registry Holdings）申請 18 個，包括 `.meta`、`.instagram`、`.threads`、`.whatsapp`、`.llama` 和 `.superintelligence`；Google（Charleston Road Registry）申請 39 個，包括 `.gemini`、`.deepmind`、`.waymo`。Anthropic 只申請 `.anthropic` 和 `.claude` 兩個，微軟則是 `.copilot` 和 `.msft`。
 
@@ -46,7 +46,7 @@ description: "ICANN 新網域字尾申請 1615 件，.agent 有 13 件、.agi �
 
 媒體報導的申請件數並不一致。The Verge 說 `.agent` 有 10 家申請（[The Verge](https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi)），The Register 則說 13 家（[The Register](https://www.theregister.com/networks/2026/10/08/icann-reveals-bids-for-new-top-level-domains/5301857)）。比對 ICANN 官方清單，`.agent` 是 13 件；`.agi` 兩家都寫 7 件，和官方一致。
 
-差異的主要原因是 ICANN 允許申請者附上一個「備用字串」，清單裡因此會同時出現主要申請和備用申請。例如 `.asi` 有 5 件主要申請，另有 1 件是別家的備用字串；如果把備用的也算進去，就會變成 6 件。
+計算方式會影響數字：ICANN 允許申請者附上一個「備用字串」，清單裡會同時出現主要申請和備用申請。例如 `.asi` 有 5 件主要申請，另有 1 件是別家的備用字串；如果把備用的也算進去，就是 6 件，和 The Verge 寫的數字相同。
 
 ## 接下來的流程和時程
 
@@ -62,8 +62,8 @@ description: "ICANN 新網域字尾申請 1615 件，.agent 有 13 件、.agi �
 ## 台灣讀者看這裡
 
 - **有沒有台灣申請者？** 有。ICANN 清單裡登記地在台灣的申請者有 4 個：華碩申請品牌字尾 `.asus`、創見資訊申請 `.transcend`、開放文化基金會申請 `.ops`（備用字串 `.git`），以及 LiveOn Co. 申請 `.explore`（備用字串 `.gossip`）。AI 相關字尾的申請者裡，沒有台灣公司。
-- **有沒有中文字尾？** ICANN 統計這輪有 21 件「國際化域名」（非英文字母）申請。核對清單，中文字尾的申請者都在中國大陸，用的是簡體字，例如北京一家公司申請「人工智能」（備用字串「智能体」），北京字跳網絡技術公司申請「抖音」。清單裡沒有繁體中文專用的字尾。
-- **申請費多少？** ICANN 的評估費是每件 **22 萬 7,000 美元**，約新台幣 725 萬元（依臺灣銀行 [10 月 9 日上午的美元即期賣出牌告](https://rate.bot.com.tw/xrt/quote/2026-10-09/USD) 31.955 換算），這還不含部分情況要另付的條件評估費（[ICANN 評估費 FAQ](https://newgtldprogram.icann.org/en/application-rounds/round2/2026-round-general/gtld-evaluation-fee/faqs)）。這是公司或組織「經營一個字尾」的費用，不是一般人註冊一個網址的價錢。
+- **有沒有中文字尾？** ICANN 統計這輪有 21 件「國際化域名」（字尾含非英文字母，例如中文）申請。核對清單，中文字尾的申請者都在中國大陸，用的是簡體字或繁簡同形的字，例如北京一家公司申請「人工智能」（備用字串「智能体」），北京字跳網絡技術公司申請「抖音」。清單裡沒有繁體中文專用的字尾。
+- **申請費多少？** ICANN 的評估費是每件 **22 萬 7,000 美元**，約新台幣 725 萬元（依臺灣銀行 [10 月 8 日 16:00 的美元即期賣出牌告](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD) 31.95 換算），這還不含部分情況要另付的條件評估費（[ICANN 評估費 FAQ](https://newgtldprogram.icann.org/en/application-rounds/round2/2026-round-general/gtld-evaluation-fee/faqs)）。這是公司或組織「經營一個字尾」的費用，不是一般人註冊一個網址的價錢。
 - **一般人什麼時候能註冊 `xxx.agent`？** ICANN 官方尚未公布開放註冊的時程（[ICANN 時程公告](https://www.icann.org/en/announcements/details/icann-announces-date-for-reveal-day-and-other-2026-round-milestones-29-09-2026-en)）。The Register 估計讀者大概明年就能註冊，The Verge 則說最快明年某個時候才會有正式結果；註冊價格也要等字尾經營者自己公布。
 
 ## 小編觀點
@@ -82,4 +82,4 @@ description: "ICANN 新網域字尾申請 1615 件，.agent 有 13 件、.agi �
 - [gTLD Evaluation Fee FAQs（ICANN）](https://newgtldprogram.icann.org/en/application-rounds/round2/2026-round-general/gtld-evaluation-fee/faqs)
 - [ICANN reveals bids for new top-level domains（The Register，2026/10/8）](https://www.theregister.com/networks/2026/10/08/icann-reveals-bids-for-new-top-level-domains/5301857)
 - [It appears .agent and .agi are about to be the hot new domains（The Verge，2026/10/7）](https://www.theverge.com/tech/1007132/icann-domains-2026-ai-agi)
-- [臺灣銀行牌告匯率：美元（2026/10/9）](https://rate.bot.com.tw/xrt/quote/2026-10-09/USD)
+- [臺灣銀行牌告匯率：美元（2026/10/8）](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)
