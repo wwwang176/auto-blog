@@ -26,7 +26,7 @@ description: "JetBrains 開源 Mellum2.1，總參數 12B、每次只動用 2.5B�
 
 可以想像一間有 64 位專科醫師的診所。病人進門時，櫃台不會讓 64 位醫師全部看診，而是挑最相關的 8 位來處理。整間診所的知識量很大（12B 參數），但每次實際出動的人力只有一小部分（2.5B 參數）。
 
-好處是每次計算量比較小。要注意的是，雖然每次只用到一部分，**下載的模型檔仍包含全部 12B 參數**，檔案大小要看總參數，不是 2.5B（見下方「在自己電腦跑」）。
+好處是每次計算量比較小。本站介紹過的〈[Mistral Large 4 預覽版登場](/posts/mistral-large-4-preview/)〉也是採用這種架構。要注意的是，雖然每次只用到一部分，**下載的模型檔仍包含全部 12B 參數**，檔案大小要看總參數，不是 2.5B（見下方「在自己電腦跑」）。
 
 ## 這一版改了什麼？
 
@@ -64,12 +64,12 @@ JetBrains 說，這一版幾乎所有功夫都花在預訓練之後的「強化�
 
 ## 在自己電腦跑，要準備什麼？
 
-**官方尚未公布建議的硬體規格**（見[模型卡](https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking)）。可以參考的是官方公布的檔案大小：
+[模型卡](https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking)和官方部落格**都沒有列出建議的硬體規格**。可以參考的是官方公布的檔案大小：
 
 - **原始權重**：Hugging Face 顯示模型約 121.5 億個參數、以 bfloat16（每個參數 2 位元組）儲存。小編估算：12.15B × 2 位元組 ≈ **24.3GB**，和官方 BF16 檔案大小一致。
 - **壓縮（量化）版 GGUF**：JetBrains 官方帳號在 Hugging Face 上已公開 [GGUF 儲存庫](https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF)，列出的檔案大小是：8 位元 Q8_0 約 12.9GB、6 位元 Q6_K 約 10.9GB、官方推薦的 4 位元 Q4_K_M 約 **8.1GB**、最小的 MXFP4_MOE 約 7.0GB。
 
-GGUF 是 llama.cpp、Ollama、LM Studio 這類「本機跑模型」工具常用的格式。官方部落格和主模型卡寫的是 GGUF 版「即將推出」；不過截至 10 月 9 日，這個 GGUF 儲存庫已公開、可下載，也列在 JetBrains 官方的 [Mellum2.1 模型合集](https://huggingface.co/collections/JetBrains/mellum21)裡，說明頁附有 llama.cpp 的執行指令。壓縮得越多檔案越小，但和原版的差異也越大，官方在說明頁列出了每個版本的差異數據。
+GGUF 是 llama.cpp、Ollama、LM Studio 這類「本機跑模型」工具常用的格式。要注意的是，官方部落格和主模型卡到 10 月 9 日都還寫著 GGUF 版「即將推出」；但 Hugging Face 上這個 GGUF 儲存庫其實已經公開。依 [Hugging Face API 資料](https://huggingface.co/api/models/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF)，它建立於台灣時間 10 月 8 日凌晨 2 點 43 分，最後一次更新是 2 點 52 分；小編 10 月 9 日查詢時是公開狀態、不需申請就能下載，也列在 JetBrains 官方的 [Mellum2.1 模型合集](https://huggingface.co/collections/JetBrains/mellum21)裡，說明頁附有 llama.cpp 和 Ollama 的執行指令。壓縮得越多檔案越小，但和原版的差異也越大，說明頁列出了每個版本和原版的差異數據（KL 散度與首選 token 一致率）。
 
 ## 台灣讀者看這裡
 
