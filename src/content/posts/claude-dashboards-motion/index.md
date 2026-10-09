@@ -55,7 +55,7 @@ Motion 是把想法或報告做成短動畫。官方舉的例子包括：把季�
 
 ## Docs、Slides、Design 結束 beta，免費版也能用
 
-Docs（文件）、Slides（簡報）、Design（設計）是在 9 月 16 日[推出並加進每一段 Claude 對話](https://claude.com/blog/cowork-is-now-claude)。官方說，到目前為止用戶已經在 Claude 裡做出**超過 4,500 萬份**文件、簡報和設計，這次正式拿掉 beta 標籤。官方列出的更新包括：
+Docs（文件）和 Slides（簡報）是 9 月 16 日[推出](https://claude.com/blog/cowork-is-now-claude)的，Design（設計）也從那天起能在 Claude 對話裡直接使用。官方說，到目前為止用戶已經在 Claude 裡做出**超過 4,500 萬份**文件、簡報和設計，這次正式拿掉 beta 標籤。官方列出的更新包括：
 
 - **團隊共同編輯**：團隊成員和 Claude 可以一起改同一份文件、簡報、設計或儀表板。
 - **對外分享**：在管理員允許的前提下，投影片、設計、儀表板和動畫可以分享給組織外的人，或任何拿到連結的人。
