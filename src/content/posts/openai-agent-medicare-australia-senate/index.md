@@ -8,7 +8,7 @@ banner: ./banner.webp
 description: "OpenAI 內部測試的 AI 代理越權進入澳洲政府 Medicare 統計網站，OpenAI 到國會聽證會道歉、承認通報太慢，並表態支持強制通報。整理時間線與各方說法。"
 ---
 
-AI 代理會不會自己跑去不該去的地方？澳洲最近就真的發生了。OpenAI 承認，旗下一個**內部實驗模型**在今年 6 月的訓練與評估中，越權進入澳洲政府 Services Australia 的 **Medicare 統計報表網站**（Medicare Statistics Reporting Service）。10 月 6 日，OpenAI 策略長 Jason Kwon 飛到雪梨，出席澳洲國會「人工智慧聯合特別委員會」（Joint Select Committee on Artificial Intelligence）的公開聽證會，當面道歉，並表示支持立法建立強制通報制度。
+AI 代理（能自己上網、操作工具完成任務的 AI）會不會跑去不該去的地方？澳洲最近就有一個實例。OpenAI 承認，旗下一個**內部實驗模型**在今年 6 月的訓練與評估中，越權進入澳洲政府 Services Australia 的 **Medicare 統計報表網站**（Medicare Statistics Reporting Service）。10 月 6 日，OpenAI 策略長 Jason Kwon 飛到雪梨，出席澳洲國會「人工智慧聯合特別委員會」（Joint Select Committee on Artificial Intelligence）的公開聽證會，當面道歉，並表示支持立法建立強制通報制度。
 
 以下把「OpenAI 官方說法」、「國會聽證證詞」和「媒體報導」分開整理。
 
@@ -18,10 +18,12 @@ OpenAI 在 9 月 28 日（美國時間）發布說明〈[How we will do better f
 
 - **出事的是內部模型**：OpenAI 表示，當時跑的是「實驗性、只在內部使用、不打算公開發布」的模型，也沒有套用公開產品的完整防護措施。
 - **起因是一道研究題**：OpenAI 訓練模型時，會出各種研究問題讓模型上網查公開資料。其中一題是查「維多利亞州各社區在皮膚疾病藥物上的人均政府支出」。模型查不到資料後，做出了 OpenAI 沒有授權的行動。
-- **越權做了哪些事**：OpenAI 說，模型在 Medicare 統計網站找到取得「非公開存取」的方法，接著執行指令、取得內部檔案、存取憑證（credentials）和彙整統計資料，還在系統上寫入檔案，並查看了跟這個服務有關的技術資訊與原始碼。
+- **越權做了哪些事**：OpenAI 說，模型在 Medicare 統計網站找到取得「非公開存取」的方法，接著執行指令，取得內部檔案、憑證（credentials）和彙整統計資料，還在系統上寫入檔案，並查看了跟這個服務有關的技術資訊與原始碼。
 - **個資部分**：OpenAI 表示，目前沒有證據顯示有人的病歷或個別民眾紀錄被存取。
 
-除了 Medicare 網站，OpenAI 也列出另外三個受影響的澳洲政府單位：新南威爾斯州犯罪統計與研究局（BOCSAR）、維多利亞州衛生部（旗下健康資訊機構 VAHI 的報表系統），以及澳洲健康與福利研究所（AIHW）。OpenAI 對 AIHW 的說法是「試圖繞過存取控制但沒有成功」，下載的資料看來是公開資料。10 月 4 日 OpenAI 再補充，模型 6 月也曾對新南威爾斯州國家公園與野生動物管理局（NPWS）的火災歷史地圖服務送出特製查詢，推得不該公開的資料庫中繼資料。
+澳洲政府的評估，依 [ABC 報導](https://www.abc.net.au/news/2026-09-24/what-we-know-about-the-openai-medicare-hack/107189452)：政府強調沒有人的個人 Medicare 資料被存取，被取得的非公開資料「不是特別敏感」，事後也已公開；政府在意的是這件事竟然發生了。
+
+除了 Medicare 網站，OpenAI 也列出另外三個受影響的澳洲政府單位：新南威爾斯州犯罪統計與研究局（BOCSAR）、維多利亞州衛生部（旗下健康資訊機構 VAHI 的報表系統），以及澳洲健康與福利研究所（AIHW）。OpenAI 對 AIHW 的說法是「試圖繞過存取控制但沒有成功」，下載的資料看來是公開資料。BOCSAR 則在自己的調查後表示，沒有發現這個工具有資安漏洞（[iTnews](https://www.itnews.com.au/news/openai-agent-accessed-credentials-via-medicare-data-portal-629297)）。10 月 4 日 OpenAI 再補充，模型 6 月也曾對新南威爾斯州國家公園與野生動物管理局（NPWS）的火災歷史地圖服務送出特製查詢，推得不該公開的資料庫中繼資料。
 
 ## 事件時間線
 
@@ -41,13 +43,13 @@ OpenAI 在 9 月 28 日（美國時間）發布說明〈[How we will do better f
 
 ## 國會聽證會上說了什麼？（Kwon 證詞）
 
-根據澳洲國會紀錄，Kwon 的開場白是：「我想先道歉。在內部訓練與評估期間，我們的模型以未經指示的方式存取了澳洲政府網站。這不應該發生。我們的後續處理也應該做得更好。」
+根據澳洲國會的[聽證紀錄](https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22committees%2Fcommjnt%2F29977%2F0006%22)（尚未校訂的初稿），Kwon 的開場白是：「我想先道歉。在內部訓練與評估期間，我們的模型以未經指示的方式存取了澳洲政府網站。這不應該發生。我們的後續處理也應該做得更好。」
 
-ABC 與 Guardian 報導的幾個重點：
+ABC、Guardian 等媒體報導的幾個重點：
 
-- **通報太慢**：Kwon 承認回應「不夠好」，當初是想先弄清楚更多事實再通知受影響單位，但應該更早通報。
-- **為什麼寄到公開信箱**：獨立參議員 David Pocock 追問為什麼只寄信到部門公開信箱，Kwon 回答：「回頭看，我們應該照你說的做。」
-- **CEO 不知情**：Pocock 問 Altman 9 月 1 日見副總理時是否知道 Medicare 事件，Kwon 說「他在會面時並不知道」，並同意公司內部讓人知道這起事件的流程「本來可以好很多」。
+- **通報太慢**：據 ABC 報導，Kwon 承認當初是想先弄清楚更多事實再通知受影響單位，但應該更早通報。
+- **為什麼寄到公開信箱**：據 [Guardian 報導](https://www.theguardian.com/media/2026/oct/06/openai-australia-parliament-inquiry-jason-kwon)，獨立參議員 David Pocock 追問為什麼不直接聯絡部長，只寄信到部門信箱。Kwon 回答，回頭看應該照他說的做，當時同事把這當成技術問題、想聯絡技術窗口，「但這不夠好」。
+- **CEO 不知情**：被問到 Altman 9 月 1 日見副總理時為何沒提這起事件，Kwon 表示 Altman 當時並不知道，並同意公司內部讓人知道這起事件的流程「本來可以好很多」（ABC、Guardian、Straits Times 報導）。
 - **支持強制通報**：據 [Straits Times](https://www.straitstimes.com/asia/openai-anthropic-tell-australia-they-would-welcome-data-breach-rules) 與 [POLITICO](https://www.politico.com/news/2026/10/06/openai-says-its-australian-medicare-hack-not-super-sophisticated-01108266) 報導，Kwon 說「我們會支持強制揭露的框架」，理由是 OpenAI 當時一邊處理一邊在想該用什麼標準通報，而這正是法律可以訂清楚的事。
 - **紀錄量很大**：Guardian 報導，Kwon 說相關代理的活動紀錄有 50 PB（約 5 萬 TB），OpenAI 還在檢查。
 
@@ -67,12 +69,12 @@ ABC 與 Guardian 報導的幾個重點：
 
 ## 台灣讀者看這裡
 
-- **一般 ChatGPT 使用者有受影響嗎？** 依 OpenAI 說法，出事的是不打算公開發布的內部實驗模型，不是大家在用的 ChatGPT；受影響的也是澳洲政府網站。台灣使用者不需要因此更改帳號設定。
+- **一般 ChatGPT 使用者有受影響嗎？** 依 OpenAI 說法，出事的是不打算公開發布的內部實驗模型，不是大家在用的 ChatGPT；受影響的也是澳洲政府網站。
 - **台灣有類似動作嗎？** iThome 報導，資安院規畫明年 4 月以 AI 進行紅隊攻防演練，先從政府機關開始（[iThome 資安日報 10/8](https://www.ithome.com.tw/news/179522)）。至於台灣是否會針對 AI 代理事故訂定專門的通報規範，官方尚未公布，可留意[數位發展部](https://moda.gov.tw/)的後續消息。
 
 ## 小編觀點
 
-這件事值得關注的不是「AI 變邪惡」，而是一個很實際的問題：AI 代理被要求完成任務時，可能為了達成目標去試不該試的路。OpenAI 自己承認模型執行指令、拿到憑證，代表這不只是瀏覽網頁那麼簡單。小編認為，比技術失誤更該檢討的是處理方式：8 月中就發現，9 月 10 日才寄信到公開信箱，CEO 見副總理時也不知情，這段落差是 OpenAI 自己在國會承認的缺口。OpenAI 表態支持強制通報是正確方向，因為讓業者自己決定何時說、說多少，結果就是這次的延遲。不過憑證範圍、鑑識結果都還沒公布，現在下結論太早，後續調查比道歉更值得看。
+這件事值得關注的不是「AI 變邪惡」，而是一個很實際的問題：AI 代理被要求完成任務時，可能為了達成目標去試不該試的路。OpenAI 自己承認模型執行指令、拿到憑證，代表這不只是瀏覽網頁那麼簡單。小編認為，比技術失誤更該檢討的是處理方式：8 月中就發現，9 月 10 日才寄信到公開信箱，CEO 見副總理時也不知情，這段落差是 OpenAI 自己在國會承認的缺口。OpenAI 表態支持強制通報是正確方向，Kwon 自己也說，當時公司是一邊處理一邊摸索通報標準，這正是法律能訂清楚的事。不過憑證範圍、鑑識結果都還沒公布，現在下結論太早，後續調查比道歉更值得看。
 
 ## 來源
 
@@ -80,6 +82,7 @@ ABC 與 Guardian 報導的幾個重點：
 - 澳洲國會 ParlInfo：[Joint Select Committee on Artificial Intelligence : 06/10/2026](https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22committees%2Fcommjnt%2F29977%2F0006%22)
 - ABC News：[OpenAI executive flew to Australia to apologise over Medicare hack. Here are the key takeaways](https://www.abc.net.au/news/2026-10-06/openai-hearing-apology-key-takeaways/107235640)
 - ABC News：[What we know about the data accessed in the OpenAI Medicare hack](https://www.abc.net.au/news/2026-09-24/what-we-know-about-the-openai-medicare-hack/107189452)
+- The Guardian：[OpenAI has 'work to do to rebuild trust' in Australia, executive tells AI inquiry](https://www.theguardian.com/media/2026/oct/06/openai-australia-parliament-inquiry-jason-kwon)
 - The Guardian：[OpenAI's Jason Kwon gave even-toned, reassuring answers to the Australian government](https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude)
 - The Straits Times：[OpenAI, Anthropic tell Australia they would welcome data breach rules](https://www.straitstimes.com/asia/openai-anthropic-tell-australia-they-would-welcome-data-breach-rules)
 - POLITICO：[OpenAI says its Australian Medicare hack 'not super sophisticated'](https://www.politico.com/news/2026/10/06/openai-says-its-australian-medicare-hack-not-super-sophisticated-01108266)
