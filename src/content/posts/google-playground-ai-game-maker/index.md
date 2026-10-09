@@ -8,7 +8,7 @@ banner: ./banner.webp
 description: "Google 推出實驗性遊戲平台 Playground，不用寫程式，打字描述就能做出網頁小遊戲並分享。目前只開放美國 18 歲以上用戶，台灣暫時不能用。"
 ---
 
-Google 在台灣時間 **2026 年 10 月 7 日晚間**（美國時間 10 月 7 日上午）發表[〈Introducing Playground〉](https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/)，推出一個實驗性的遊戲平台 **Playground**（網址 [playground.google](https://playground.google/)）。它的賣點很簡單：**不用會寫程式，用打字描述你想要的遊戲，就能做出可以玩、可以分享的小遊戲。**
+Google 在美國時間 **2026 年 10 月 7 日**發表[〈Introducing Playground〉](https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/)，推出一個實驗性的遊戲平台 **Playground**（網址 [playground.google](https://playground.google/)）。它的賣點很簡單：**不用會寫程式，用打字描述你想要的遊戲，就能做出可以玩、可以分享的小遊戲。**
 
 先講結論：**目前只開放美國 18 歲以上用戶，台灣暫時還不能用。**
 
@@ -31,11 +31,9 @@ Playground 是網頁版，官方說手機或筆電的瀏覽器都能玩。平台
 
 部分遊戲類型支援**排行榜**和**多人遊玩**。用 Play Games 個人檔案還能設定自訂名稱、幫喜歡的遊戲按讚、追蹤創作者。Google 表示，展示區會依玩家評分和遊玩熱度推薦遊戲；所有公開發佈的遊戲都會經過符合社群規範的安全審查，玩家也可以檢舉。
 
-## 背後用什麼 AI？要付錢嗎？
+## 要付錢嗎？
 
-Google 官方部落格**沒有寫**底層用哪些模型，也沒有公布價格，只說創作權限會依你的 **Google AI 訂閱方案分級**開放。
-
-補充資訊來自媒體採訪：[The Verge 報導](https://www.theverge.com/tech/1006477/google-playground-unity-spark-ai)引述 Google 發言人 Nia Carter 的說法，Playground **可以免費使用**，有 Google One 訂閱的人每週可用的 token 額度會依方案提高；底層則是 Google 既有的基礎模型（**Gemini、Nano Banana、Lyria**），搭配 Google 用內部自製遊戲和評測調整過的專屬框架。各方案的實際額度，官方尚未公布。
+Google 的[公告](https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/)沒有列出價格，只說創作權限會依你的 **Google AI 訂閱方案分級**開放；[Google Labs 介紹頁](https://labs.google/playground)也註明「可能需要訂閱」（Subscription may be required）。
 
 ## Unity Spark：還在測試中
 
@@ -46,13 +44,13 @@ Google 也預告 Playground 之後會整合 Unity 的 **Unity Spark**，讓想�
 ## 台灣讀者看這裡
 
 - **台灣能不能用**：目前不行。官方寫明 Playground 只開放**美國 18 歲以上**用戶，何時開放其他地區，官方尚未公布（[官方公告](https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/)）。
-- **中文介面**：官方尚未公布是否支援中文（[playground.google](https://playground.google/)）。
-- **價格**：官方沒有公布 Playground 的單獨價格，只說創作權限依 Google AI 訂閱方案分級，所以這裡不做新台幣換算。
+- **中文介面**：官方尚未公布是否支援中文（[Google Labs 介紹頁](https://labs.google/playground)）。
+- **價格**：這次公告沒有列出 Playground 的價格，只說創作權限依 Google AI 訂閱方案分級，所以這裡不做新台幣換算。
 - **台灣現在能用的類似工具**：如果只是想試試「用 AI 做小遊戲」，Gemini 的 **Canvas** 功能可以把描述變成可預覽、可分享的網頁 App 或遊戲程式碼（[Gemini Canvas 官方介紹](https://gemini.google/overview/canvas/)），而 Gemini 在台灣可以使用（[Gemini 開放地區](https://support.google.com/gemini/answer/13575153)）。差別在於 Canvas 比較像「幫你寫程式」，沒有 Playground 那樣的遊戲展示區、排行榜和多人遊玩。
 
 ## 小編觀點
 
-Playground 的方向值得關注：它把「用 AI 寫程式」包裝成一般人也能上手的遊戲創作，再加上分享、排行榜和展示區，降低了做遊戲的門檻。The Verge 也提到 Meta 和 Roblox 最近都推出用 AI 做遊戲的功能，可見這類工具不只 Google 在做。不過小編對它短期內的影響持保留態度：目前只限美國成年用戶，各方案額度沒有公開，Unity Spark 也還沒開放測試。對台灣讀者來說，現階段可以先用 Gemini Canvas 體驗用描述生成小遊戲，等 Playground 開放更多地區、公布額度細節，再評估值不值得投入。
+Playground 的方向值得關注：它把「用 AI 寫程式」包裝成一般人也能上手的遊戲創作，再加上分享、排行榜和展示區，降低了做遊戲的門檻，和〈[Claude 推 Dashboards 和 Motion](/posts/claude-dashboards-motion/)〉讓不會 SQL 的人也能做報表，是同樣的思路。The Verge 也提到 Meta 和 Roblox 都在推用 AI 做遊戲的功能。不過小編對它短期內的影響持保留態度：目前只限美國成年用戶，各訂閱方案能做到什麼程度也還沒說清楚，Unity Spark 也還沒開放測試。對台灣讀者來說，現階段可以先用 Gemini Canvas 體驗用描述生成小遊戲，等 Playground 開放更多地區、公布各方案細節，再評估值不值得投入。
 
 ## 來源
 
