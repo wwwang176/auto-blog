@@ -29,7 +29,7 @@ Google 在美國時間 **2026 年 10 月 6 日**[發表 EmbeddingGemma 2](https:
 
 **1. 一個模型處理四種內容。** 第一代 EmbeddingGemma 只處理文字；第二代把**文字（含程式碼）、圖片、影片、聲音**放進同一個 768 維的空間。官方舉的例子是：用一段語音備忘錄找出某段影片片段，或用一句文字搜尋好幾小時的錄音。單一輸入也能混合文字、圖片和影片，例如把一則商品介紹（文字＋照片＋示範影片）變成一組座標。
 
-**2. 要用什麼就載入什麼。** 模型是「積木式」的：只處理文字時只需 2.7 億參數；加上視覺編碼器（1.7 億）是 4.4 億；加上聲音編碼器（3 億）是 5.7 億；全部載入是 7.4 億。
+**2. 要用什麼就載入什麼。** 模型是「積木式」的：只處理文字時只需 2.7 億參數；文字加上視覺編碼器（1.7 億）是 4.4 億；文字加上聲音編碼器（3 億）是 5.7 億；全部載入是 7.4 億。
 
 **3. 手機跑得動。** 官方說，經過量化（壓縮）後，在 Google Pixel 11 Pro 上，純文字版最少約需 **191MB** 執行記憶體，完整多模態版約 **567MB**。資料在裝置上處理，不必上傳雲端。
 
@@ -37,7 +37,7 @@ Google 在美國時間 **2026 年 10 月 6 日**[發表 EmbeddingGemma 2](https:
 
 **5. 座標可以「縮短」省空間。** 透過名為 Matryoshka（俄羅斯娃娃）的訓練方式，768 維的座標可以截短成 512、256 或 128 維，儲存空間最多省 6 倍。[官方開發者指南](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/)提醒：縮到 128 維時，圖片、影片、語音檢索的品質會掉到約七成五，最好先用自己的資料測過。
 
-**6. 程式碼搜尋明顯進步。** 在程式碼檢索測試 MTEB Code 上，分數從第一代的 68.76 提高到 78.68；多語言文字的表現則和第一代差不多（61.15 對 61.36）。
+**6. 程式碼搜尋明顯進步。** 在程式碼檢索測試 MTEB Code 上，分數從第一代的 68.76 提高到 78.68；多語言文字的表現則和第一代差不多（61.15 對 61.36）。Google 也說，它在 10 億參數以下的多模態嵌入模型裡，MTEB Code 和聲音測試 MAEB 等成績領先同級。
 
 ## 誰會用到它？
 
@@ -47,12 +47,12 @@ Google 在美國時間 **2026 年 10 月 6 日**[發表 EmbeddingGemma 2](https:
 - 筆記或文件 App 的「語意搜尋」，搜意思而不只是搜關鍵字。
 - 企業內部知識庫的 AI 助理，先找到正確文件再回答。
 
-開發者可以在 [Hugging Face](https://huggingface.co/google/embeddinggemma-2) 和 Kaggle 下載權重；官方也列出 sentence-transformers、Ollama、LM Studio、llama.cpp、vLLM、MLX 等常用工具支援。想先看效果的人，官方在 Google AI Edge Gallery 裡放了「Instant Media Search」「Video Moments Finder」等手機示範。
+開發者可以在 [Hugging Face](https://huggingface.co/google/embeddinggemma-2) 和 Kaggle 下載權重；官方也列出 sentence-transformers、Ollama、LM Studio、llama.cpp、vLLM、MLX 等常用工具支援。想先看效果的人，官方在 Google AI Edge Gallery 裡放了「Instant Media Search」「Video Moments Finder」等手機示範。同一週開源圈還有另一則消息：Mistral 公布大型開放權重模型預覽版，詳見本站〈[Mistral Large 4 預覽版登場](/posts/mistral-large-4-preview/)〉。
 
 ## 需要留意的地方
 
 - **語言表現不一定平均**：模型卡寫明支援 100 多種語言，但也說「各語言的表現可能不一致」。
-- **它沒有安全過濾**：模型卡說明，嵌入模型沒有像聊天機器人那樣做輸出審核，怎麼使用、要加哪些防護，責任在開發者。
+- **沒有輸出端的安全審核**：模型卡說明，它不像生成式模型那樣做後訓練的安全調整或輸出審核，只在訓練資料階段做過濾；怎麼使用、要加哪些防護，責任在開發者。
 - **精度設定**：官方提醒要用 bfloat16 或 float32 執行，用 float16 可能得到錯誤結果卻不會報錯。
 
 ## 台灣讀者看這裡
