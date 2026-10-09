@@ -16,7 +16,7 @@ OpenAI 在美國時間 **2026 年 9 月 29 日**的 DevDay 開發者大會上發
 
 簡單說，Dots 是住在 ChatGPT 裡、**不用你一直盯著也會繼續做事**的 AI 助理。依 [OpenAI 官方公告](https://openai.com/index/introducing-dots/)：
 
-- **由 GPT-6 Astra 驅動**，每個 dot 都有**自己的雲端電腦和瀏覽器**，可以 24 小時朝你設定的目標工作。
+- **由 GPT-6 Astra 驅動**（GPT-6 在 ChatGPT 的上線情形，可參考本站〈[GPT-6 開放 ChatGPT 全用戶](/posts/chatgpt-gpt-6-intelligent-ui-for-everyone/)〉），每個 dot 都有**自己的雲端電腦和瀏覽器**，可以 24 小時朝你設定的目標工作。
 - 透過外掛生態系，可以連接**超過 4,000 個 App**，例如信箱、行事曆、檔案。
 - **會越用越懂你**：它會從你的回饋學習你的偏好和做事標準。
 - 你沒在用的時候，它會在背景做「主動研究」（proactive research），但這時連接的 App 只有**唯讀**權限，不能發訊息、改內容或操控你的電腦。
@@ -54,7 +54,7 @@ OpenAI 在美國時間 **2026 年 9 月 29 日**的 DevDay 開發者大會上發
 
 - **第一個 dot 包含在 Pro 或 Business Premium 方案裡，不另外收費**，方案也附帶一定的「深度工作」額度，上線第一個月額度較寬。
 - 跟 dot 聊天**不算進** ChatGPT 的用量上限；但它幫你派給 Codex 或 ChatGPT Work 的任務，照常計入。
-- 官方說之後可以加買更多 dot，或提升單一 dot 的速度與每月工作量，價格沒有公布。
+- 官方說之後可以加買更多 dot，或提升單一 dot 的速度與每月工作量，這次公告沒有列出價格。
 
 Pro 目前有三種月費：Pro 100、Pro 200、Pro 500，分別是每月 100、200、500 美元（[OpenAI 說明中心](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)）。也就是說，**最便宜的入場門檻是每月 100 美元**。
 
@@ -72,16 +72,16 @@ WIRED 記者 Reece Rogers 試用了兩天，主要任務是請 dot 幫他和伴�
 **出錯的地方**
 
 - **一開口就叫錯名字**：記者叫 Reece，它卻用別的名字打招呼。
-- **聽錯話**：記者小聲嘀咕時，它誤以為對方說了「我愛你」，還回了一句「我也愛你」。事後它解釋是聽錯了，並承認這種說法暗示了它其實沒有的人類情感。OpenAI 發言人對 WIRED 表示，這屬於「呼應使用者的回應」，但助理不應主動營造過度的親密感；Dots 也只開放給成年用戶。
+- **聽錯話**：記者小聲嘀咕時，它誤以為對方說了「我愛你」，還回了一句「我也愛你」。事後它解釋是聽錯了，並承認這種說法暗示了它其實沒有的人類情感。OpenAI 發言人對 WIRED 表示，這屬於「呼應使用者的回應」，但助理不應主動營造過度的親密感。WIRED 也提到，Dots 只開放給成年用戶。
 - **過不了驗證碼**：記者請它清查訂閱、取消不需要的項目。它找到一筆定期訂購，但取消頁面跳出拼圖驗證碼。它先問能不能幫忙解，結果失敗，只好請記者自己來。OpenAI 發言人表示，在使用者同意的前提下，Dots 有時能解開驗證碼。
 
-記者的看法是：Dots 就像 ChatGPT 剛加入網頁瀏覽功能時，一開始不太好用，之後幾個月才明顯改善；Dots 可能也會走類似的路。他也提醒，連接 Gmail 這類帳號之前，要先想清楚隱私和安全的風險。
+記者的看法是：Dots 就像 ChatGPT 剛加入網頁瀏覽功能時，一開始不太好用，還會給出不存在的連結，現在已經相當順暢；Dots 可能也會走類似的路，在接下來幾個月明顯改善。他也提醒，連接 Gmail 這類帳號之前，要先想清楚隱私和安全的風險。
 
 ## 台灣讀者看這裡
 
 - **能不能用**：依[說明中心](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot)，Pro 方案排除的地區只有歐洲經濟區、瑞士和英國，台灣不在排除名單中；但官方說是逐步開放，符合資格的帳號也可能要等幾天才看得到。Business Premium 則是所有支援 ChatGPT 的地區都能用。
 - **中文**：ChatGPT 介面支援中文（[官方語言清單](https://help.openai.com/en/articles/8357869-how-to-use-chatgpt-in-a-language-other-than-english-alpha)），Dots 也有官方的[繁體中文介紹頁](https://chatgpt.com/zh-Hant/features/dots/)，中文名稱就叫「dot」。
-- **價格**：依 [App Store 台灣區 ChatGPT 頁面](https://apps.apple.com/tw/app/chatgpt/id6448311069)列出的訂閱價格（2026/10/9 查詢），Pro 100 每月 NT$3,300、Pro 200 每月 NT$6,990、Pro 500 每月 NT$16,500。同一頁列出的 Plus 每月 NT$690，目前不含 Dots。
+- **價格**：依 [App Store 台灣區 ChatGPT 頁面](https://apps.apple.com/tw/app/chatgpt/id6448311069)列出的訂閱價格（2026/10/9 查詢），Pro 100 每月 NT$3,300、Pro 200 每月 NT$6,990、Pro 500 每月 NT$16,500。同一頁列出的 Plus（NT$690）方案目前不含 Dots。
 - **跟其他工具比**：WIRED 提到，同類型的 Meta Muse 是免費提供，而 Dots 要付每月 100 美元起的訂閱才能用。
 
 ## 小編觀點
