@@ -31,7 +31,7 @@ Microsoft 在官方部落格 Command Line 標示 **2026 年 10 月 9 日**的文
 - **題型**：是非題、單選題、評分題，也可以依一套評分標準（rubric）幫 AI 的回答或 AI 代理的動作打分數。資訊不夠時，還可以設「無法判斷」這類選項。
 - **底座**：Microsoft 拿阿里巴巴的開放權重模型 Qwen3.5-9B 做後訓練，模型卡寫參數規模落在 50 億到 150 億之間。官方說之後會改用其他模型當底座，包括 Microsoft AI（MAI）和 OpenAI 的模型。
 
-舉個例子，[OpenRouter 模型頁](https://openrouter.ai/microsoft/microsoft-decision-1)的範例是：把「救命！我的撥款已經失敗 3 天了」這句客訴丟進去，同時問三題：這是不是緊急？該分給帳務、技術還是業務部門？客戶有多生氣（平靜、不滿、非常憤怒）？模型一次回傳三題的機率，程式再依結果決定要不要升級處理。
+舉個例子，Microsoft 在公告中建議的用途之一是「事件分流」：把一則事件依類型和緊急程度分類，再交給對應的團隊或流程。開發者把事件內容和固定的選項一起丟給 Decision-1，拿到各選項的機率，程式再依結果決定怎麼處理。
 
 官方特別強調機率要「校準過」：回答 90% 的那些判斷，在具代表性的案例中，應該大約 10 次對 9 次。這樣開發者才能設門檻，例如「信心夠高就自動處理，不夠就交給真人」。
 
@@ -39,7 +39,7 @@ Microsoft 在官方部落格 Command Line 標示 **2026 年 10 月 9 日**的文
 
 以下數字都出自 [Microsoft 公告](https://commandline.microsoft.com/microsoft-decision-1-model-foundry/)，是官方自己的評測，目前還沒看到第三方獨立驗證：
 
-- **速度**：在 Microsoft 的測試中，它是量到最快的模型，**比第二名 H2O-Lightning-4B v1.1 快 2.5 倍，比 GPT-6 Sol 快 35 倍**（比的是 P50，也就是中位數延遲）。
+- **速度**：在 Microsoft 的測試中，它是量到最快的模型，**比第二名 H2O-Lightning-4B v1.1 快 2.5 倍，比 GPT-6 Sol 快 35 倍**；公告寫明，和 GPT-6 Sol 比的是 P50，也就是中位數延遲。
 - **準確度**：在涵蓋 36 個評測、近 15 萬道題目、且沒拿來訓練的比較中，準確度最高。
 - **穩定性**：同一個請求用 8 種方式改寫（換句話說、調換選項順序等），平均只有 1.3% 的情況會改變判斷；只改寫選項描述或打亂選項順序時，判斷完全沒變。
 - **內部試用**：Xbox 研究團隊用它把 1 萬多則玩家回饋分到固定主題，官方說品質和 GPT-6 Sol 相當，速度快 14 倍以上、成本低 200 倍。
@@ -69,7 +69,7 @@ Microsoft 在官方部落格 Command Line 標示 **2026 年 10 月 9 日**的文
 - **台灣能不能用**：OpenRouter 的[服務條款](https://openrouter.ai/terms)說，部分模型供應商會限制特定國家或地區的使用者，這類「受限模型」不能透過 OpenRouter 使用。Decision-1 在 OpenRouter 上目前只有 Azure 一家供應商；它是否限制台灣，Microsoft 與 OpenRouter 官方尚未公布（見 [OpenRouter 模型頁](https://openrouter.ai/microsoft/microsoft-decision-1)、[Foundry 模型卡](https://ai.azure.com/catalog/models/Microsoft-Decision-1)）。企業用戶也可以直接走 Microsoft Foundry（Azure 帳號）。
 - **中文支援**：這是給開發者串接的 API，沒有一般人直接操作的中文介面。[模型卡](https://ai.azure.com/catalog/models/Microsoft-Decision-1)寫，它主要針對英文最佳化，並在中文、日文、韓文等 20 多種語言上做過評測，但也提醒涵蓋程度、品質和機率校準會因語言而異；模型卡沒有區分繁體或簡體中文。
 - **價格換算**：每 100 萬輸入 token 0.042 美元，約 **NT$1.34**；同樣是決策用途的 OpenAI Decisions API（GPT-6 Luna）是 0.10 美元，約 NT$3.2。舉例來說，處理 1 萬筆、每筆 1,000 token 的請求，共 1,000 萬 token，約 0.42 美元，大約 NT$13。換算依 [2026 年 10 月 8 日 16:00 臺灣銀行美元即期賣出牌告](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)，1 美元兌 31.95 新台幣（10 月 9 日的臺銀頁面查無牌告資料，故採前一個有資料的營業日），僅供概算，實際金額依發卡銀行匯率與手續費而定。
-- **OpenRouter 的額外費用**：OpenRouter 以美元儲值，[官方 FAQ](https://openrouter.ai/docs/faq) 寫明儲值時收 5.5% 手續費（最低 0.80 美元，約 NT$25.6），接受主要信用卡、AliPay 和 USDC 加密貨幣。
+- **OpenRouter 的額外費用**：OpenRouter 以美元儲值，[官方 FAQ](https://openrouter.ai/docs/faq) 寫明購買額度時收 5.5% 手續費（最低 0.80 美元，約 NT$25.6），用加密貨幣付款則收 5%；接受主要信用卡、AliPay 和 USDC 加密貨幣。
 
 ## 小編觀點
 
