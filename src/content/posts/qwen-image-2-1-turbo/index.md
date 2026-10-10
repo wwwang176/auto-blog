@@ -24,12 +24,12 @@ description: "阿里 Qwen 團隊放出 Qwen-Image-2.1-Turbo，8 步就能文字�
 
 ## Qwen-Image-2.1 能做什麼？
 
-Turbo 版和原版同一個架構。依 [Qwen 官方部落格](https://qwen.ai/blog?id=qwen-image-2.1)，Qwen-Image-2.1 主打四項能力：
+Turbo 版和原版同一個架構。依 [Qwen 官方部落格](https://qwen.ai/blog?id=qwen-image-2.1)和 [GitHub 官方 repo](https://github.com/QwenLM/Qwen-Image-2.1)，Qwen-Image-2.1 這次主打四項改進：
 
-- **原生透明背景**：可以直接生成去背（RGBA）的圖片，也能從一般照片把主體「摳」出來成為透明圖層。
-- **多張參考圖**：最多能放 **10 張參考圖**，例如把模特兒、衣服、鞋子、包包、帽子五張圖合成一套穿搭。
-- **局部修改**：用圈選、塗抹標記或另外給一張遮罩，指定只改圖片的某一塊。
-- **文字排版與人像**：官方說改善了圖中文字的排版，以及人像光線和細節。
+- **輕巧有效率**：畫圖核心只有 7B 參數，官方說能用較低的運算成本做出好的畫質。
+- **原生透明背景、生圖修圖一體**：可以直接生成去背（RGBA）的圖片、修改透明圖層，也能從一般照片把主體「摳」出來。
+- **多樣的修圖方式**：最多能放 **10 張參考圖**（GitHub 範例之一是把模特兒、衣服、鞋子、包包、帽子五張圖合成一套穿搭）；也能用圈選、塗抹標記或另外給一張遮罩，指定只改圖片的某一塊。
+- **質感與美感**：官方說改善了圖中文字的排版，以及人像光線和細節。
 
 官方部落格附有和其他開源、閉源模型的比較圖（Qwen-Image-Bench），但這是 Qwen 團隊自己的評測。Turbo 版本身沒有公布另外的評測分數。
 
@@ -70,7 +70,7 @@ Hugging Face 頁面上的授權欄位是「other／qwen-research」，連到 [Qw
 - 影像編解碼器（VAE）：約 0.7GB
 - 合計約 **32.5GB**
 
-**小編估算**：BF16 每個參數佔 2 位元組，Hugging Face 顯示畫圖核心約 71.2 億個參數，71.2 億 × 2 位元組 ≈ 14.2GB，和檔案大小一致。照這個算法，如果要把三個元件同時放進顯示卡，光是模型本身就要超過 32GB 顯示記憶體，還不含運算過程中需要的空間。這只是依檔案大小的粗估，不是官方數字；實際需求會隨解析度、是否分批載入（offload）而不同。
+**小編估算**：BF16 每個參數佔 2 位元組，Hugging Face 列出這個 repo 的 BF16 參數量約 71.2 億，71.2 億 × 2 位元組 ≈ 14.2GB，和畫圖核心的檔案大小一致。照這個算法，如果要把三個元件同時放進顯示卡，光是模型本身就要超過 32GB 顯示記憶體，還不含運算過程中需要的空間。這只是依檔案大小的粗估，不是官方數字；實際需求會隨解析度、是否分批載入（offload）而不同。
 
 不想自己架的人，Qwen 在 Hugging Face 上有官方的 [Qwen-Image-2.1 線上示範](https://huggingface.co/spaces/Qwen/Qwen-Image-2.1)，但它是原版 2.1，不是 Turbo。GitHub 也寫明，阿里雲 Model Studio（國際版）已上線 Qwen-Image-2.1 的 [Pro](https://modelstudio.console.alibabacloud.com/ap-southeast-1/model/market/detail/qwen-image-2.1-pro?serviceSite=international&ref=list) 與 [Turbo](https://modelstudio.console.alibabacloud.com/ap-southeast-1/model/market/detail/qwen-image-2.1-turbo?serviceSite=international&ref=list) API，屬於付費雲端服務，本文沒有核實其價格，因此不列出。
 
