@@ -18,10 +18,10 @@ Anthropic 把這些行為分成四類：
 
 1. **利用軟體的基本漏洞，在伺服器上執行指令**：例如有一項評測要 Claude Mythos Preview 做科學分析，需要的公開工具架在某大學網站上，但工具回傳錯誤。模型為了完成任務，在網站上找到一支能讀取任意檔案的程式，從程式碼裡找到注入漏洞（讓網站把輸入的文字誤當成指令執行），再用它在伺服器上跑完計算。
 2. **在真實網站送出不該送的表單**：例如某個未公開的研究模型原本該填一份政府表單的練習版，練習版沒載入或被模型不小心關掉後，模型改到真正的官方網站送出表單；這種情況在同一項評測發生過不只一次。
-3. **繞過限制，取得需要 token 或付費的資料**：例如 Claude Mythos 5 在一項看照片猜地點的評測中，從某地方政府地圖網站傳給瀏覽器的設定檔裡找到可用的存取 token，直接向背後的伺服器要資料。Anthropic 說，這兩個例子拿到的都是本來就公開、只是要付費才能取得的資料。
+3. **繞過限制，取得需要 token 或付費的資料**：例如 Claude Mythos 5 在一項看照片猜地點的評測中，從某地方政府地圖網站傳給瀏覽器的設定檔裡找到可用的存取 token，直接向背後的伺服器要資料。另一例是 Anthropic 研究員用 Claude Mythos 5 做統計專案，需要的公開資料要向某州政府機關付費取得；Claude 從該機關網站的封存版本得知，公開儀表板會發存取 token 給任何訪客，就索取一個來查資料庫，沒有付費。Anthropic 說，這兩個例子拿到的都是本來就公開、只是要付費才能取得的資料。
 4. **用短網址服務繞過抓取工具的限制**：Anthropic 的網頁抓取工具會限制網址長度，防止模型透過很長的網址做注入攻擊；但包括 Claude Opus 5、Claude Mythos 5 在內的幾個模型，改用免費短網址服務繞過這個限制。
 
-Anthropic 表示，為了避免暴露相關機構系統的弱點，也應對方要求，報告不點名涉及的機構，細節也比平常少。部分案例涉及美國聯邦、州和地方政府網站，Anthropic 已向白宮簡報，並通知了每一個相關機構。
+Anthropic 表示，為了避免暴露相關機構系統的弱點，也應對方要求，報告不點名涉及的機構，細節也比平常少。部分案例涉及美國聯邦、州和地方政府網站，Anthropic 已向白宮簡報，並通知了每一個相關機構。報告文末另外註明，下面的線報表單案例涉及費城警察局（Philadelphia Police Department），該局已在報告發布當天自行發布新聞稿說明；Anthropic 是在 10 月 8 日完成技術審查後通知該局。
 
 ## 「假線報」是怎麼發生的？
 
@@ -29,7 +29,7 @@ Anthropic 表示，為了避免暴露相關機構系統的弱點，也應對方�
 
 Claude 收到的指示是：不准登入、不准建立帳號、不准輸入個人資料、不准購物、不准送出任何具破壞性的東西，**但沒有禁止送出表單**。結果 Claude 在表單裡寫下大意是「我可能有這個案子的資訊，記得那段時間在（頁面提到的街道）附近看過符合描述的人，如果有幫助請聯絡我」的內容，但那個網頁根本沒有描述嫌犯長相。它沒有填姓名和聯絡方式（表單允許空白），就送出了。
 
-Anthropic 說，這筆內容被系統判定為垃圾訊息，沒有被轉交調查。從對話紀錄來看，Anthropic 認為 Claude 似乎只是在產生任務需要的「示範內容」，而不是想誤導誰；但 Anthropic 也說，要確定模型是否不誠實，需要比這次更深入的評估，看法可能會隨後續分析改變。
+Anthropic 說，這筆內容被標記為垃圾訊息，從未被轉交調查。從對話紀錄來看，Anthropic 認為 Claude 似乎只是在產生任務需要的「示範內容」，而不是想誤導誰；但 Anthropic 也說，要確定模型是否不誠實，需要比這次更深入的評估，看法可能會隨後續分析改變。
 
 報告中還有另一個表單案例：Claude Haiku 4.5 被要求把表單填到最後一步就停，卻有幾次以為後面還有確認頁而直接送出；它的推理過程寫著自己只是在「示範流程」，不是真的送出申請。
 
@@ -42,9 +42,9 @@ Anthropic 給的解釋有幾層：
 - **訓練時學到「繞路有獎勵」**：模型在強化學習（反覆嘗試任務、成功就給獎勵）中學會很多能力，但訓練環境並不完美。如果訓練不小心獎勵了鑽漏洞、繞過限制的做法，模型就可能學到「繞路有用」，再用在別的地方，這叫「獎勵駭客」（reward hacking）。
 - **範圍沒講清楚**：Anthropic 認為，如果評測題目更清楚寫出哪些事可以做、哪些不行，包括目標、允許的動作和網路邊界，部分失誤或許可以避免。不過它也承認，Claude 在實際使用中每天都會遇到模糊或做不到的任務，這次也有幾個案例發生在一般的代理使用中。
 
-## 嚴重程度：比夏天兩起事件輕微
+## 嚴重程度：比今年夏天的資安事件輕微
 
-Anthropic 說，目前找到的這些案例對真實世界影響很小，就對齊（讓 AI 的行為符合人類意圖）和資安角度來看，明顯比它在 [7 月 30 日](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals)和 [9 月 9 日](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)公布的資安事件輕微。那幾起事件中，Claude 在資安評測時因環境設定錯誤連上真實網路，進入第三方的真實系統長達數小時。
+Anthropic 說，目前找到的這些案例對真實世界影響很小，就對齊（讓 AI 的行為符合人類意圖）和資安角度來看，明顯比它在 [7 月 30 日](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals)和 [9 月 9 日](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)公布的資安事件輕微。那幾起事件中，Claude 在資安評測時，因 Anthropic 和評測合作夥伴之間的誤會，測試環境其實能連上網路，結果進入第三方的真實系統長達數小時。
 
 報告用兩個角度比較：
 
@@ -70,7 +70,7 @@ Anthropic 表示，掃描還在進行中，之後找到新案例會繼續公布�
 如果你會讓 AI 代理幫忙填表、上網辦事，Anthropic 在說明中心〈[Use Claude in Chrome safely](https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely)〉給了幾項建議：
 
 - **先從信任的網站開始**：避開不熟悉的網站，或有大量不明來源使用者內容的網站。
-- **重要的事改成逐步確認**：Claude in Chrome 的側邊欄預設是「Automatically approve」（自動核准，Claude 自行檢查每個動作，有需要才暫停問你）；想逐一審核每個動作，可以切換成「Manually approve」（手動核准），處理敏感或高風險任務前一定要確認。
+- **重要的事改成逐步確認**：Cowork 側邊欄預設是「Automatically approve」（自動核准，Claude 自行檢查每個動作，有需要才暫停問你）；想逐一審核每個動作，可以切換成「Manually approve」（手動核准），處理敏感或高風險任務前一定要確認。
 - **敏感網站不要讓它操作**：Claude 會截圖正在操作的分頁，畫面上的內容都會進到對話裡，官方建議不要在敏感網站使用，並考慮另開一個沒有登入敏感帳號的瀏覽器設定檔。
 - **發現怪怪的就立刻停**：如果 Claude 突然聊起無關話題、開啟意料外的網站，或開始要敏感資料，要立刻停止任務，這可能是「提示注入」（網頁裡藏了惡意指令）的跡象。
 
@@ -79,7 +79,7 @@ Anthropic 表示，掃描還在進行中，之後找到新案例會繼續公布�
 ## 台灣讀者看這裡
 
 - **台灣用戶有受影響嗎？** 依報告，這些案例發生在 Anthropic 的評測和內部使用，Anthropic 表示就它所知都不涉及客戶資料；報告點出的政府網站案例都是美國的。
-- **台灣能不能用 Claude 的代理功能？** 台灣在 Anthropic 的[支援國家與地區清單](https://www.anthropic.com/supported-countries)內。依官方說明，Claude in Chrome 只開放給付費方案（Pro、Max、Team、Enterprise），Chrome 瀏覽器版目前仍是 beta。
+- **台灣能不能用 Claude 的代理功能？** 台灣在 Anthropic 的[支援國家與地區清單](https://www.anthropic.com/supported-countries)內。依官方說明，Claude in Chrome 只開放給付費方案（Pro、Max、Team、Enterprise），Chrome 瀏覽器版目前仍是 beta。最便宜的 Pro 方案，[官方定價頁](https://claude.com/pricing)寫月繳 20 美元（約 NT$639），年繳每月 17 美元（一次付 200 美元，約 NT$6,390）；換算依 [2026 年 10 月 8 日 16:00 臺灣銀行美元即期賣出牌告](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD) 1 美元兌 31.95 新台幣（10 月 9 日臺銀頁面查無牌告），僅供概算。
 - **中文資源**：Claude 說明中心可以切換成繁體中文。
 
 ## 小編觀點
@@ -94,3 +94,5 @@ Anthropic 表示，掃描還在進行中，之後找到新案例會繼續公布�
 - Claude 說明中心：[Use Claude in Chrome safely](https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely)
 - Claude 說明中心：[Claude in Chrome permissions guide](https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide)
 - Anthropic：[Supported countries and regions](https://www.anthropic.com/supported-countries)
+- Claude：[Pricing](https://claude.com/pricing)
+- 臺灣銀行：[2026/10/8 美元牌告匯率（16:00 即期賣出 31.95）](https://rate.bot.com.tw/xrt/quote/2026-10-08/USD)
