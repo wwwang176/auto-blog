@@ -2,10 +2,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  schedule:
-    # 台北時間 09/12/15/19 點（UTC 01/04/07/11）重建，讓排程文章上線。
-    # 不用第 0 分（GitHub 整點排程常延遲或被丟掉），每個時段跑 :02、:07、:13 三次，互為備援。
-    - cron: '2,7,13 1,4,7,11 * * *'
+  # 排程重建已暫停（2026-10-10，暫停發文）。要恢復時，把下面三行取消註解（cron 是 UTC，等於台北 09/12/15/19 點的 :02、:07、:13）：
+  # schedule:
+  #   - cron: '2,7,13 1,4,7,11 * * *'
   workflow_dispatch:
 permissions:
   contents: read

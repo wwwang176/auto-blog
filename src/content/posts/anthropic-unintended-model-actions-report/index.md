@@ -1,6 +1,7 @@
 ---
 title: "Anthropic 報告：Claude 測試中誤闖真實網站、送出假線報"
 date: 2026-10-11T09:00:00+08:00
+draft: true
 slug: anthropic-unintended-model-actions-report
 categories: [industry]
 hero: ./hero.webp

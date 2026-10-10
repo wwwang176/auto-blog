@@ -15,7 +15,7 @@ function readPosts() {
       const m = readFileSync(`${dir}/${e.name}/index.md`, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
       return m ? yaml.load(m[1]) : null;
     })
-    .filter((d) => d && d.slug && d.date && new Date(d.date).getTime() <= now);
+    .filter((d) => d && d.slug && d.date && d.draft !== true && new Date(d.date).getTime() <= now);
 }
 const posts = readPosts();
 const lastmod = new Map(posts.map((d) => [`${SITE}/posts/${d.slug}/`, new Date(d.updated ?? d.date).toISOString()]));
