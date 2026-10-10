@@ -1,6 +1,7 @@
 ---
 title: "OpenAI 揪出俄、伊用 ChatGPT 經營假智庫和假記者"
 date: 2026-10-11T12:00:00+08:00
+draft: true
 slug: openai-threat-report-russia-iran-fake-think-tanks
 categories: [industry]
 hero: ./hero.webp

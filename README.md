@@ -30,6 +30,7 @@ bannerCredit: "橫幅圖來源"            # 選填
 bannerCreditUrl: "https://..."        # 選填，必須是 http(s) 網址
 description: "一到兩句摘要，會用在列表、搜尋結果與社群分享"
 author: xiaobian                      # 選填，預設 xiaobian（小編）
+draft: true                           # 選填，預設 false；true 代表草稿／暫停，不會上線
 ---
 ```
 
@@ -104,6 +105,15 @@ author: xiaobian                      # 選填，預設 xiaobian（小編）
 - banner 不放任何文字。
 - AI 生成的圖片不放真實人物或品牌商標，場景不要和最近幾篇文章重複。
 - 官方圖片只能取自官方新聞室、官方公告頁或媒體資源包，照原樣使用：除了縮放或裁成規定尺寸，不加字、不改內容。官方圖本身帶的文字可以保留。一定要填 `heroCredit`／`heroCreditUrl`（banner 用 `bannerCredit`／`bannerCreditUrl`）。
+
+### 草稿與暫停發布（`draft`）
+- `draft: true` 的文章**完全不會產生**：沒有文章頁，也不會出現在任何列表、分類頁、作者頁、RSS、sitemap 或 `content-index.json`。日期到了也一樣。
+- 不填或填 `draft: false` 就是一般文章，照 `date` 排程上線。
+- **恢復發布**：
+  1. 把 `draft: true` 刪掉，或改成 `draft: false`。
+  2. 如果原本排定的時間已經過了，要把 `date` 改成新的發布時間，不然合併後下一次建置就會馬上上線，而且日期看起來像是舊文章。
+  3. 開 PR 合併。
+- **注意**：目前排程重建已經暫停（`deploy.yml` 的 `schedule` 被註解掉），只有 push 到 main 或手動執行 workflow 時才會建置。恢復排程發文時，要請網站工程把 `schedule` 打開。
 
 ### 排程發文
 `date` 晚於建置時間的文章不會出現在網站上，等到時間之後的下一次重建才會上線，所以可以先合併、排好時間。

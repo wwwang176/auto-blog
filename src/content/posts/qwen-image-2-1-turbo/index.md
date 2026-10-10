@@ -1,6 +1,7 @@
 ---
 title: "阿里 Qwen-Image-2.1-Turbo：8 步出圖修圖，限研究用"
 date: 2026-10-11T19:00:00+08:00
+draft: true
 slug: qwen-image-2-1-turbo
 categories: [open-source]
 hero: ./hero.webp

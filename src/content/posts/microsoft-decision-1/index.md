@@ -1,6 +1,7 @@
 ---
 title: "Microsoft Decision-1：不聊天、只給各選項機率的決策模型"
 date: 2026-10-11T15:00:00+08:00
+draft: true
 slug: microsoft-decision-1
 categories: [new-models]
 hero: ./hero.webp
